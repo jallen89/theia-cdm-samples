@@ -1,6 +1,5 @@
 syscall    | Event type       | Predicate Objs       | location | size          | Properties                         
------------|------------------|----------------------|----------|---------------|------------------------------------
-fork       | FORK             | child process        |          |               |                                    
+-----------|------------------|----------------------|----------|---------------|------------------------------------                            
 clone      | CLONE            | child process        |          |               |                                    
 execve     | EXECUTE          | process, file        |          |               |                                    
 setuid     | CHANGE_PRINCIPAL | principal            |          |               | newuid, rc                         
@@ -21,10 +20,10 @@ recvfrom   | RECVFROM         | netflow              |          | bytesReceived 
 recvmsg    | RECVMSG          | netflow              |          | bytesReceived |                                    
 ioctl      | FCNTL            | file                 | command  |               |                                    
 mount      | MOUNT            |                      |          |               | devname, dirname, type, flags, rc  
-shmat      | SHM              | memory               |          |               | shmid, shmaddr, shmflg, rc, raddr  
-shmget     | SHM              |                      |          | size          | key, size, shmflg, shmid           
+shmat      | SHM              | file,memory          |          |               | shmid, shmaddr, shmflg, rc, raddr  
+shmget     | SHM              | file                 |          | size          | key, size, shmflg, shmid           
 Note
 --------
 * We provide *uuid*, *type*, *threadId*, *subject*, *timestamp*, and *name* (syscall) of events.
-* We do not provide *sequence*, *predicateObjectPath*, *predicateObject2Path*, *parameters*, and *programPoint*.
+* We do not provide  *predicateObjectPath*, *predicateObject2Path*, *parameters*, and *programPoint*.
 * Currently, **pipe** has a bug. We will fix it to provide the information of both ends.
