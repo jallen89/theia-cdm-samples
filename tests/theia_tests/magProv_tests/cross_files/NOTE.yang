@@ -1,9 +1,0 @@
-test case for cross-process file-file causality tracking
-steps:
-1. $ ./clear.sh
-2. $ ./part1
-3. $ ./part2
-
-recorded trace:
-part1: /replay_logdb/rec_65543
-part2: /replay_logdb/rec_65544

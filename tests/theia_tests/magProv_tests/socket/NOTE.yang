@@ -1,8 +1,0 @@
-# this tests the data propagation with socket and file interfaces.
-
-0. ./build.sh
-1. touch w1.txt w2.txt w3.txt
-2. echo "" > w1{2,3}.txt
-3. ./server.sh
-4. ./sock_client
-5. w1{2,3}.txt should be populated with messages from server1{2,3}

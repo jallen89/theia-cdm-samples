@@ -1,8 +1,0 @@
-this test tests the mmap handling. two files are both mmaped. The in file goes 
-to the out file.
-
-run:
-./simp-read-mmap
-
-replay trace:
-65539
