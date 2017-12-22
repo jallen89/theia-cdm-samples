@@ -1,0 +1,73 @@
+<!ENTITY title "Opties">
+<!ENTITY asciiTitle "ASCII-bestandstypen">
+<!ENTITY general.label "Algemeen">
+<!ENTITY messages.label "Berichten">
+<!ENTITY welcome.label "Welkomstbericht tonen">
+<!ENTITY error.label "Foutmeldingen tonen">
+<!ENTITY sessions.label "Sessies">
+<!ENTITY rememberp.label "Wachtwoorden onthouden">
+<!ENTITY rememberd.label "Inhoud van mappen onthouden">
+<!ENTITY fileview.label "Bestanden weergeven">
+<!ENTITY autorefresh.label "Automatisch vernieuwen">
+<!ENTITY refresh.tip "Het overzicht vernieuwen nadat de bestanden op de server zijn gewijzigd (door uploaden, hernoemen, enz.)">
+<!ENTITY hidden.label "Verborgen bestanden tonen">
+<!ENTITY bytesmode.label "Het aantal bytes voor bestandsgroottes tonen">
+<!ENTITY interface.label "Interface">
+<!ENTITY startup.label "FireFTP starten:">
+<!ENTITY windowopen.label "in een nieuw venster">
+<!ENTITY tabopen.label "in een nieuw tabblad">
+<!ENTITY groupopen.label "in een venstergroep">
+<!ENTITY integrateftplnk.label "FTP-koppelingen in Firefox automatisch FireFTP laten gebruiken">
+<!ENTITY temppasvmode.label "Passieve modus voor deze verbindingen gebruiken">
+<!ENTITY open.label "Dubbelklikken/enter:">
+<!ENTITY download.label "verzendt een bestand">
+<!ENTITY exec.label "opent een bestand">
+<!ENTITY both.tip "Zowel lokale bestanden als bestanden op de server tonen">
+<!ENTITY local.tip "Alleen lokale bestanden tonen">
+<!ENTITY remote.tip "Alleen bestanden op de server tonen">
+<!ENTITY logwindow.label "Log">
+<!ENTITY logmode.label "Log in hoofdvenster tonen">
+<!ENTITY logerrormode.label "Alleen fouten in de log tonen">
+<!ENTITY debug.label "Debuginformatie in log tonen">
+<!ENTITY connect.label "Verbindingen">
+<!ENTITY proxy.label "Proxy">
+<!ENTITY none.label "Geen">
+<!ENTITY direct.label "Direct">
+<!ENTITY host.label "Host:">
+<!ENTITY port.label "Poort:">
+<!ENTITY active.label "Actieve modus">
+<!ENTITY limitPorts.label "Poorten beperken">
+<!ENTITY from.label "Van:">
+<!ENTITY to.label "Naar:">
+<!ENTITY concurrent.label "Gelijktijdige overdrachten">
+<!ENTITY simtransfers.label "Max. simultane overdrachten (1-10)">
+<!ENTITY recovery.label "Verbindingsherstel">
+<!ENTITY network.label "Netwerktime-out (sec):">
+<!ENTITY network.tip "Bepaalt hoe lang gewacht moet worden op een antwoord van de server">
+<!ENTITY keepalivemode.label "Houdt de verbinding open; ook als die niet actief gebruikt wordt">
+<!ENTITY timeout.label "Bij verbroken verbinding automatisch opnieuw proberen te verbinden">
+<!ENTITY retryd.label "Vertraging in opnieuw proberen (in seconden, tussen 1 en 600)">
+<!ENTITY retryd.tip "Aantal seconden tussen pogingen om opnieuw te verbinden">
+<!ENTITY retrya.label "Aantal maal opnieuw proberen">
+<!ENTITY retrya.tip "Aantal pogingen die gedaan moeten worden">
+<!ENTITY downup.label "Downloads/Uploads">
+<!ENTITY transfercaption.label "Bij het verzenden van bestanden gebruiken:">
+<!ENTITY automatic.label "Automatische modus">
+<!ENTITY automatic.tip "Automatisch tussen ‘Binaire’ en ‘ASCII’-modus kiezen">
+<!ENTITY binary.label "Binaire modus">
+<!ENTITY ascii.label "ASCII-modus">
+<!ENTITY asciifiles.label "ASCII-bestanden:">
+<!ENTITY asciifiles.tip "Door komma’s gescheiden lijst van als ASCII herkende bestanden">
+<!ENTITY add.label "Toevoegen">
+<!ENTITY remove.label "Verwijderen">
+<!ENTITY extras.label "Extra’s (als beschikbaar op server)">
+<!ENTITY usecompression.label "Compressie gebruiken">
+<!ENTITY synctimestamps.label "Tijd synchroon houden">
+<!ENTITY integritymode.label "Integriteit van overdrachten (XMD5, XSHA1) controleren">
+<!ENTITY duplicates.label "Dubbele bestanden">
+<!ENTITY timer.label "Timer uitschakelen in overschrijfdialoog">
+<!ENTITY nopromptmode.label "Venster ‘Overschrijven bevestigen’ niet weergeven, altijd overschrijven">
+<!ENTITY credits.label "Met dank aan">
+<!ENTITY thanks.label "Bedankt:">
+<!ENTITY allothers.label "Alle anderen die fouten hebben gemeld of op een andere manier hebben geholpen">
+<!ENTITY special.label "Een speciaal bedankje voor iedereen die een donatie heeft gedaan!">

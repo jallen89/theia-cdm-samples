@@ -1,0 +1,311 @@
+[84675.695740] In replay_ckpt_wakeup
+[84675.695743] Pid 13586 new_record_group: entered
+[84675.695806] record/replay clock is at ffc93000
+[84675.695814] Pid 13586 new_record_group 227362839552: exited
+[84675.695817] Pid 13586 creates new record thread: ecb00000, recpid 0
+[84675.695847] new_replay_group: ed861ba0
+[84675.695849] New replay thread ed8a3500 prg ed861ba0 reppid 13586
+[84675.695850]  refcnt for record_thread ecb00000 pid 0 now 2
+[84675.695852] pid 13586 enters replay_resume_from_disk: filename /replay_logdb/rec_102403/ckpt
+[84675.695862] Pid 13586 replay_resume_from_disk: rg_id 102403
+[84675.695865] Pid 13586 replay_resume_from_disk: parent_rg_id 01 arguments in checkpoint
+[84675.695875] copyed 32 bytes
+[84675.695876] Argument 0 is magProv_tests/netrecon/netrecon
+[84675.695878] 22 env. objects in checkpoint
+[84675.695882] Env. 0 is TERM=xterm
+[84675.695886] Env. 1 is SHELL=/bin/bash
+[84675.695890] Env. 2 is XDG_SESSION_COOKIE=aa4a9481061f00776439c37e00000002-1476889282.206065-1552683258
+[84675.695894] Env. 3 is SSH_CLIENT=172.16.63.1 43201 22
+[84675.695897] Env. 4 is SSH_TTY=/dev/pts/0
+[84675.695900] Env. 5 is USER=yang
+[84675.695906] Env. 6 is LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.flEnv. 7 is MAIL=/var/mail/yang
+[84675.695914] Env. 8 is PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+[84675.695918] Env. 9 is PWD=/home/yang/omniplay
+[84675.695921] Env. 10 is LANG=en_US.UTF-8
+[84675.695924] Env. 11 is OMNIPLAY_DIR=/home/yang/omniplay
+[84675.695927] Env. 12 is SHLVL=1
+[84675.695931] Env. 13 is HOME=/home/yang
+[84675.695934] Env. 14 is PYTHONPATH=:/home/yang/omniplay/python_environ
+[84675.695938] Env. 15 is LOGNAME=yang
+[84675.695942] Env. 16 is SSH_CONNECTION=172.16.63.1 43201 172.16.63.139 22
+[84675.695945] Env. 17 is LESSOPEN=| /usr/bin/lesspipe %s
+[84675.695951] Env. 18 is LESSCLOSE=/usr/bin/lesspipe %s %s
+[84675.695954] Env. 19 is _=test/launcher
+[84675.695959] Env. 20 is OLDPWD=/home/yang/omniplay/magProv_tests/netrecon
+[84675.695963] Env. 21 is LD_LIBRARY_PATH=/home/yang/omniplay/eglibc-2.15/prefix/lib:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/local/lib:/usr/lib:/lib
+[84675.695966] replay_resume_from_disk done
+[84675.695970] Reading logid 13561 starting at pos 0
+[84675.695972] Opening /replay_logdb/rec_102403/klog.id.13561
+[84675.695976] Open returns 4
+[84675.695980] read_log_data syscall count is 45
+[84675.695983] read_log_data data length is 444
+[84675.695988] Pid 13561 add_argsalloc_node: adding an args slab to record_thread
+[84675.695992] Pid 13586 read_log_data_internal returned 45 syscalls
+[84675.695994] Pid 13586 set_record_group_id to 102403
+[84675.695995] init_evs.
+[84675.695996] Set linker for replay process to /home/yang/omniplay/eglibc-2.15/prefix/lib//ld-linux.so.2
+[84675.695999] Replay Pid 13586, index 0 sys 11
+[84675.696001] Replay Pid 13586, index 0 sys 11 retval 0
+[84675.696002] Pid 13586 incremented replay clock on syscall 11 entry to 1
+[84675.696004] Replay pid 13586 performing execve of magProv_tests/netrecon/netrecon
+[84675.696010] replay_execve 8751: do_execve(/replay_cache/800001_465f2, ec96ba30, f2b6a360, eca09fb4)
+[84675.696023] Got exec filename: magProv_tests/netrecon/netrecon
+[84675.696040] Get linker from record process: /home/yang/omniplay/eglibc-2.15/prefix/lib//ld-linux.so.2
+[84675.696103] In replay_execval
+[84675.696106] In save_exec_args
+[84675.696110] Pid 13586 incremented replay clock on syscall 11 exit to 2
+[84675.696111] replay_execve: sp is bfe99370, ip is b7741e90
+[84675.696137] Pid 13586, regular replay syscall 45
+[84675.696139] Replay Pid 13586, index 1 sys 45
+[84675.696141] Replay Pid 13586, index 1 sys 45 retval 136744960
+[84675.696143] Pid 13586 incremented replay clock on syscall 45 entry to 3
+[84675.696144] Pid 13586 incremented replay clock on syscall 45 exit to 4
+[84675.696170] Pid 13586, regular replay syscall 192
+[84675.696172] Replay Pid 13586, index 2 sys 192
+[84675.696174] Replay Pid 13586, index 2 sys 192 retval -1217138688
+[84675.696175] Pid 13586 incremented replay clock on syscall 192 entry to 5
+[84675.696177] Pid 13586 incremented replay clock on syscall 192 exit to 6
+[84675.696181] Pid 13586 replays mmap_pgoff with address 0 len 1000 input address b773f000 fd -1 flags 22 prot 3 pgoff 0 returning b773f000, flags & MAP_FIXED 0
+[84675.696200] Pid 13586, regular replay syscall 33
+[84675.696201] Replay Pid 13586, index 3 sys 33
+[84675.696203] Replay Pid 13586, index 3 sys 33 retval -2
+[84675.696204] Pid 13586 incremented replay clock on syscall 33 entry to 7
+[84675.696205] Pid 13586 incremented replay clock on syscall 33 exit to 8
+[84675.696218] Pid 13586, regular replay syscall 5
+[84675.696219] Replay Pid 13586, index 4 sys 5
+[84675.696221] Replay Pid 13586, index 4 sys 5 retval -2
+[84675.696222] Pid 13586 incremented replay clock on syscall 5 entry to 9
+[84675.696223] Pid 13586 incremented replay clock on syscall 5 exit to 10
+[84675.696225] replay_open: trying to open /home/yang/omniplay/eglibc-2.15/prefix/lib/tls/i686/sse2/libc.so.6, rc -2
+[84675.696228] Pid 13586, regular replay syscall 195
+[84675.696230] Replay Pid 13586, index 5 sys 195
+[84675.696231] Replay Pid 13586, index 5 sys 195 retval -2
+[84675.696233] Pid 13586 incremented replay clock on syscall 195 entry to 11
+[84675.696234] Pid 13586 incremented replay clock on syscall 195 exit to 12
+[84675.696235] Pid 13586, regular replay syscall 5
+[84675.696236] Replay Pid 13586, index 6 sys 5
+[84675.696238] Replay Pid 13586, index 6 sys 5 retval -2
+[84675.696243] Pid 13586 incremented replay clock on syscall 5 entry to 13
+[84675.696244] Pid 13586 incremented replay clock on syscall 5 exit to 14
+[84675.696245] replay_open: trying to open /home/yang/omniplay/eglibc-2.15/prefix/lib/tls/i686/libc.so.6, rc -2
+[84675.696246] Pid 13586, regular replay syscall 195
+[84675.696247] Replay Pid 13586, index 7 sys 195
+[84675.696249] Replay Pid 13586, index 7 sys 195 retval -2
+[84675.696250] Pid 13586 incremented replay clock on syscall 195 entry to 15
+[84675.696251] Pid 13586 incremented replay clock on syscall 195 exit to 16
+[84675.696252] Pid 13586, regular replay syscall 5
+[84675.696253] Replay Pid 13586, index 8 sys 5
+[84675.696255] Replay Pid 13586, index 8 sys 5 retval -2
+[84675.696256] Pid 13586 incremented replay clock on syscall 5 entry to 17
+[84675.696257] Pid 13586 incremented replay clock on syscall 5 exit to 18
+[84675.696258] replay_open: trying to open /home/yang/omniplay/eglibc-2.15/prefix/lib/tls/sse2/libc.so.6, rc -2
+[84675.696259] Pid 13586, regular replay syscall 195
+[84675.696260] Replay Pid 13586, index 9 sys 195
+[84675.696262] Replay Pid 13586, index 9 sys 195 retval -2
+[84675.696263] Pid 13586 incremented replay clock on syscall 195 entry to 19
+[84675.696264] Pid 13586 incremented replay clock on syscall 195 exit to 20
+[84675.696265] Pid 13586, regular replay syscall 5
+[84675.696267] Replay Pid 13586, index 10 sys 5
+[84675.696268] Replay Pid 13586, index 10 sys 5 retval -2
+[84675.696269] Pid 13586 incremented replay clock on syscall 5 entry to 21
+[84675.696270] Pid 13586 incremented replay clock on syscall 5 exit to 22
+[84675.696271] replay_open: trying to open /home/yang/omniplay/eglibc-2.15/prefix/lib/tls/libc.so.6, rc -2
+[84675.696273] Pid 13586, regular replay syscall 195
+[84675.696274] Replay Pid 13586, index 11 sys 195
+[84675.696275] Replay Pid 13586, index 11 sys 195 retval -2
+[84675.696276] Pid 13586 incremented replay clock on syscall 195 entry to 23
+[84675.696277] Pid 13586 incremented replay clock on syscall 195 exit to 24
+[84675.696279] Pid 13586, regular replay syscall 5
+[84675.696280] Replay Pid 13586, index 12 sys 5
+[84675.696281] Replay Pid 13586, index 12 sys 5 retval -2
+[84675.696283] Pid 13586 incremented replay clock on syscall 5 entry to 25
+[84675.696284] Pid 13586 incremented replay clock on syscall 5 exit to 26
+[84675.696285] replay_open: trying to open /home/yang/omniplay/eglibc-2.15/prefix/lib/i686/sse2/libc.so.6, rc -2
+[84675.696286] Pid 13586, regular replay syscall 195
+[84675.696287] Replay Pid 13586, index 13 sys 195
+[84675.696289] Replay Pid 13586, index 13 sys 195 retval -2
+[84675.696290] Pid 13586 incremented replay clock on syscall 195 entry to 27
+[84675.696291] Pid 13586 incremented replay clock on syscall 195 exit to 28
+[84675.696292] Pid 13586, regular replay syscall 5
+[84675.696293] Replay Pid 13586, index 14 sys 5
+[84675.696295] Replay Pid 13586, index 14 sys 5 retval -2
+[84675.696296] Pid 13586 incremented replay clock on syscall 5 entry to 29
+[84675.696297] Pid 13586 incremented replay clock on syscall 5 exit to 30
+[84675.696298] replay_open: trying to open /home/yang/omniplay/eglibc-2.15/prefix/lib/i686/libc.so.6, rc -2
+[84675.696299] Pid 13586, regular replay syscall 195
+[84675.696300] Replay Pid 13586, index 15 sys 195
+[84675.696302] Replay Pid 13586, index 15 sys 195 retval -2
+[84675.696303] Pid 13586 incremented replay clock on syscall 195 entry to 31
+[84675.696304] Pid 13586 incremented replay clock on syscall 195 exit to 32
+[84675.696306] Pid 13586, regular replay syscall 5
+[84675.696307] Replay Pid 13586, index 16 sys 5
+[84675.696308] Replay Pid 13586, index 16 sys 5 retval -2
+[84675.696309] Pid 13586 incremented replay clock on syscall 5 entry to 33
+[84675.696310] Pid 13586 incremented replay clock on syscall 5 exit to 34
+[84675.696311] replay_open: trying to open /home/yang/omniplay/eglibc-2.15/prefix/lib/sse2/libc.so.6, rc -2
+[84675.696313] Pid 13586, regular replay syscall 195
+[84675.696314] Replay Pid 13586, index 17 sys 195
+[84675.696315] Replay Pid 13586, index 17 sys 195 retval -2
+[84675.696316] Pid 13586 incremented replay clock on syscall 195 entry to 35
+[84675.696317] Pid 13586 incremented replay clock on syscall 195 exit to 36
+[84675.696319] Pid 13586, regular replay syscall 5
+[84675.696320] Replay Pid 13586, index 18 sys 5
+[84675.696322] Replay Pid 13586, index 18 sys 5 retval 3
+[84675.696323] Pid 13586 incremented replay clock on syscall 5 entry to 37
+[84675.696325] Pid 13586 incremented replay clock on syscall 5 exit to 38
+[84675.696326] replay_open: trying to open /home/yang/omniplay/eglibc-2.15/prefix/lib/libc.so.6, rc 3
+[84675.696334] replay_open: opened cache file /home/yang/omniplay/eglibc-2.15/prefix/lib/libc.so.6 flags 80000 fd is 3 rc is 3
+[84675.696336] Pid 13586, regular replay syscall 3
+[84675.696338] Replay Pid 13586, index 19 sys 3
+[84675.696339] Replay Pid 13586, index 19 sys 3 retval 512
+[84675.696340] Pid 13586 incremented replay clock on syscall 3 entry to 39
+[84675.696342] Pid 13586 incremented replay clock on syscall 3 exit to 40
+[84675.696344] [READ] Pid 13586 replays read returning 512, fd 3, clock 40, log_clock 40
+[84675.696345] read from cache file 3 files ed537fa0 bytes 512 off 0
+[84675.696351] Pid 13586, regular replay syscall 197
+[84675.696353] Replay Pid 13586, index 20 sys 197
+[84675.696355] Replay Pid 13586, index 20 sys 197 retval 0
+[84675.696356] Pid 13586 incremented replay clock on syscall 197 entry to 41
+[84675.696357] Pid 13586 incremented replay clock on syscall 197 exit to 42
+[84675.696362] Pid 13586, regular replay syscall 192
+[84675.696363] Replay Pid 13586, index 21 sys 192
+[84675.696365] Replay Pid 13586, index 21 sys 192 retval -1218834432
+[84675.696366] Pid 13586 incremented replay clock on syscall 192 entry to 43
+[84675.696368] Pid 13586 incremented replay clock on syscall 192 exit to 44
+[84675.696369] replay_mmap_pgoff uses open cache file 3 for 3
+[84675.696374] Pid 13586 replays mmap_pgoff with address 0 len 19dabc input address b75a1000 fd 3 flags 802 prot 5 pgoff 0 returning b75a1000, flags & MAP_FIXED 0
+[84675.696376] Pid 13586, regular replay syscall 192
+[84675.696377] Replay Pid 13586, index 22 sys 192
+[84675.696379] Replay Pid 13586, index 22 sys 192 retval -1217163264
+[84675.696380] Pid 13586 incremented replay clock on syscall 192 entry to 45
+[84675.696382] Pid 13586 incremented replay clock on syscall 192 exit to 46
+[84675.696383] replay_mmap_pgoff uses open cache file 3 for 3
+[84675.696390] Pid 13586 replays mmap_pgoff with address b7739000 len 3000 input address b7739000 fd 3 flags 812 prot 3 pgoff 197 returning b7739000, flags & MAP_FIXED 16
+[84675.696397] Pid 13586, regular replay syscall 192
+[84675.696399] Replay Pid 13586, index 23 sys 192
+[84675.696401] Replay Pid 13586, index 23 sys 192 retval -1217150976
+[84675.696402] Pid 13586 incremented replay clock on syscall 192 entry to 47
+[84675.696403] Pid 13586 incremented replay clock on syscall 192 exit to 48
+[84675.696409] Pid 13586 replays mmap_pgoff with address b773c000 len 2abc input address b773c000 fd -1 flags 32 prot 3 pgoff 0 returning b773c000, flags & MAP_FIXED 16
+[84675.696417] Pid 13586, regular replay syscall 6
+[84675.696418] Replay Pid 13586, index 24 sys 6
+[84675.696420] Replay Pid 13586, index 24 sys 6 retval 0
+[84675.696421] Pid 13586 incremented replay clock on syscall 6 entry to 49
+[84675.696422] Pid 13586 incremented replay clock on syscall 6 exit to 50
+[84675.696423] pid 13586 about to close cache fd 3 fd 3
+[84675.696436] Pid 13586, regular replay syscall 192
+[84675.696438] Replay Pid 13586, index 25 sys 192
+[84675.696439] Replay Pid 13586, index 25 sys 192 retval -1218838528
+[84675.696441] Pid 13586 incremented replay clock on syscall 192 entry to 51
+[84675.696442] Pid 13586 incremented replay clock on syscall 192 exit to 52
+[84675.696445] Pid 13586 replays mmap_pgoff with address 0 len 1000 input address b75a0000 fd -1 flags 22 prot 3 pgoff 0 returning b75a0000, flags & MAP_FIXED 0
+[84675.696454] Pid 13586, regular replay syscall 192
+[84675.696455] Replay Pid 13586, index 26 sys 192
+[84675.696457] Replay Pid 13586, index 26 sys 192 retval -1218842624
+[84675.696458] Pid 13586 incremented replay clock on syscall 192 entry to 53
+[84675.696459] Pid 13586 incremented replay clock on syscall 192 exit to 54
+[84675.696463] Pid 13586 replays mmap_pgoff with address 0 len 1000 input address b759f000 fd -1 flags 22 prot 3 pgoff 0 returning b759f000, flags & MAP_FIXED 0
+[84675.696550] Pid 13586, regular replay syscall 125
+[84675.696552] Replay Pid 13586, index 27 sys 125
+[84675.696554] Replay Pid 13586, index 27 sys 125 retval 0
+[84675.696555] Pid 13586 incremented replay clock on syscall 125 entry to 55
+[84675.696556] Pid 13586 incremented replay clock on syscall 125 exit to 56
+[84675.696562] Pid 13586 replays mprotect 1 for b7739000-b773b000 returning 0
+[84675.696565] Pid 13586, regular replay syscall 125
+[84675.696567] Replay Pid 13586, index 28 sys 125
+[84675.696568] Replay Pid 13586, index 28 sys 125 retval 0
+[84675.696570] Pid 13586 incremented replay clock on syscall 125 entry to 57
+[84675.696571] Pid 13586 incremented replay clock on syscall 125 exit to 58
+[84675.696575] Pid 13586 replays mprotect 1 for 8049000-804a000 returning 0
+[84675.696580] Pid 13586, regular replay syscall 125
+[84675.696582] Replay Pid 13586, index 29 sys 125
+[84675.696584] Replay Pid 13586, index 29 sys 125 retval 0
+[84675.696585] Pid 13586 incremented replay clock on syscall 125 entry to 59
+[84675.696586] Pid 13586 incremented replay clock on syscall 125 exit to 60
+[84675.696589] Pid 13586 replays mprotect 1 for b7760000-b7761000 returning 0
+[84675.696617] Pid 13586, regular replay syscall 102
+[84675.696619] Pid 13586 in replay_socketcall(1)
+[84675.696621] Replay Pid 13586, index 30 sys 102
+[84675.696623] Replay Pid 13586, index 30 sys 102 retval 3
+[84675.696624] Pid 13586 incremented replay clock on syscall 102 entry to 61
+[84675.696625] Pid 13586 incremented replay clock on syscall 102 exit to 62
+[84675.696627] Pid 13586, replay_socketcall 1, rc is 3, retparams is f934d144
+[84675.696632] Pid 13586, regular replay syscall 54
+[84675.696633] Replay Pid 13586, index 31 sys 54
+[84675.696635] Replay Pid 13586, index 31 sys 54 retval 0
+[84675.696636] Pid 13586 incremented replay clock on syscall 54 entry to 63
+[84675.696638] Pid 13586 incremented replay clock on syscall 54 exit to 64
+[84675.696681] Pid 13586, regular replay syscall 45
+[84675.696683] Replay Pid 13586, index 32 sys 45
+[84675.696684] Replay Pid 13586, index 32 sys 45 retval 136744960
+[84675.696686] Pid 13586 incremented replay clock on syscall 45 entry to 65
+[84675.696687] Pid 13586 incremented replay clock on syscall 45 exit to 66
+[84675.696688] Pid 13586, regular replay syscall 45
+[84675.696690] Replay Pid 13586, index 33 sys 45
+[84675.696692] Replay Pid 13586, index 33 sys 45 retval 136880128
+[84675.696693] Pid 13586 incremented replay clock on syscall 45 entry to 67
+[84675.696694] Pid 13586 incremented replay clock on syscall 45 exit to 68
+[84675.696708] Pid 13586, regular replay syscall 5
+[84675.696709] Replay Pid 13586, index 34 sys 5
+[84675.696710] Replay Pid 13586, index 34 sys 5 retval 4
+[84675.696712] Pid 13586 incremented replay clock on syscall 5 entry to 69
+[84675.696713] Pid 13586 incremented replay clock on syscall 5 exit to 70
+[84675.696714] replay_open: trying to open /tmp/netrecon.log, rc 4
+[84675.696743] Pid 13586, regular replay syscall 54
+[84675.696744] Replay Pid 13586, index 35 sys 54
+[84675.696746] Replay Pid 13586, index 35 sys 54 retval 0
+[84675.696747] Pid 13586 incremented replay clock on syscall 54 entry to 71
+[84675.696748] Pid 13586 incremented replay clock on syscall 54 exit to 72
+[84675.696749] Pid 13586, regular replay syscall 54
+[84675.696750] Replay Pid 13586, index 36 sys 54
+[84675.696752] Replay Pid 13586, index 36 sys 54 retval 0
+[84675.696753] Pid 13586 incremented replay clock on syscall 54 entry to 73
+[84675.696754] Pid 13586 incremented replay clock on syscall 54 exit to 74
+[84675.696760] Pid 13586, regular replay syscall 197
+[84675.696761] Replay Pid 13586, index 37 sys 197
+[84675.696763] Replay Pid 13586, index 37 sys 197 retval 0
+[84675.696764] Pid 13586 incremented replay clock on syscall 197 entry to 75
+[84675.696765] Pid 13586 incremented replay clock on syscall 197 exit to 76
+[84675.696769] Pid 13586, regular replay syscall 192
+[84675.696770] Replay Pid 13586, index 38 sys 192
+[84675.696772] Replay Pid 13586, index 38 sys 192 retval -1218846720
+[84675.696773] Pid 13586 incremented replay clock on syscall 192 entry to 77
+[84675.696774] Pid 13586 incremented replay clock on syscall 192 exit to 78
+[84675.696777] Pid 13586 replays mmap_pgoff with address 0 len 1000 input address b759e000 fd -1 flags 22 prot 3 pgoff 0 returning b759e000, flags & MAP_FIXED 0
+[84675.696783] Pid 13586, regular replay syscall 54
+[84675.696784] Replay Pid 13586, index 39 sys 54
+[84675.696786] Replay Pid 13586, index 39 sys 54 retval 0
+[84675.696787] Pid 13586 incremented replay clock on syscall 54 entry to 79
+[84675.696788] Pid 13586 incremented replay clock on syscall 54 exit to 80
+[84675.696790] Pid 13586, regular replay syscall 54
+[84675.696791] Replay Pid 13586, index 40 sys 54
+[84675.696792] Replay Pid 13586, index 40 sys 54 retval 0
+[84675.696793] Pid 13586 incremented replay clock on syscall 54 entry to 81
+[84675.696794] Pid 13586 incremented replay clock on syscall 54 exit to 82
+[84675.696797] Pid 13586, regular replay syscall 54
+[84675.696799] Replay Pid 13586, index 41 sys 4
+[84675.696800] [ERROR]Pid  13586 record pid 13561 expected syscall 54 in log, got 4, start clock 82
+[84675.696802] Pid: 13586, comm: 800001_465f2 Tainted: G           O 3.5.7.13-ddevec-replay #163
+[84675.696804] Call Trace:
+[84675.696811]  [<c107469f>] cget_next_syscall_enter+0x91f/0xa70
+[84675.696825]  [<c1078413>] get_next_syscall+0x43/0xe0
+[84675.696835]  [<c109d6a2>] shim_ioctl+0x422/0x8d0
+[84675.696839]  [<c10a7c5d>] ? shim_fstat64+0x2cd/0x3e0
+[84675.696850]  [<c163ef7f>] sysenter_do_call+0x12/0x28
+[84675.696852] SYSCALL MISMATCH
+[84675.696854] Replay thread 13586 starting to exit, recpid 13561
+[84675.696887] Replay thread 13586 recpid 13561 in middle of exit
+[84675.696898] Replay Pid 13586 about to exit
+[84675.696900] put_replay_group ed861ba0 refcnt 1
+[84675.696902] Pid 13586 destroy replay group ed861ba0: enter
+[84675.696903]   Pid 13586 enters destroy_replay_thread: pid 13586, prp = ed8a3500, refcnt=1
+[84675.696905]       Pid 13586 __destroy_record_thread: ecb00000
+[84675.696907]         pid 13586 !YES! destroy record thread! pid = 13561, prp = ecb00000, refcnt=0
+[84675.696908]  destroy_record_thread freeing log f9489000: start
+[84675.696914]        destroy_record_thread freeing log f9489000: end
+[84675.696921]       Pid 13586 __destroy_record_thread: exit!
+[84675.696922]   Pid 13586 exits destroy_replay_thread: pid 13586, prp = ed8a3500
+[84675.696923] Goodbye, cruel lamp!  This replay is over
+[84675.696924] Pid 13586 destroy replay group ed861ba0: exit
+[84675.696925] Pid 13586 destroying record group efe1b800
+

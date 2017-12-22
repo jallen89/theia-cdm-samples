@@ -1,0 +1,940 @@
+ret_val , ret_time , call_time , process_name , pid , tid , syscall , arg1 , arg2 , ...
+victim, -2 (ENOENT), 18145117, 18108590, stapio, 28798, 28798, execve, "/usr/local/sbin/python", ["python", "test4.py"], [/* 18 vars */]
+victim, -2 (ENOENT), 18166219, 18155971, stapio, 28798, 28798, execve, "/usr/local/bin/python", ["python", "test4.py"], [/* 18 vars */]
+victim, -2 (ENOENT), 18184710, 18174214, stapio, 28798, 28798, execve, "/usr/sbin/python", ["python", "test4.py"], [/* 18 vars */]
+victim, 0, 18520272, 18192641, stapio, 28798, 28798, execve, "/usr/bin/python", ["python", "test4.py"], [/* 18 vars */]
+victim, -2 (ENOENT), 18612023, 18595843, python, 28798, 28798, access, "/etc/ld.so.nohwcap", F_OK
+victim, 0xffffffffb77cf000, 18633224, 18622188, python, 28798, 28798, mmap2, 0x0, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, -2 (ENOENT), 18664938, 18655398, python, 28798, 28798, access, "/etc/ld.so.preload", R_OK
+victim, 3, 18704180, 18685028, python, 28798, 28798, open, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC
+victim, 0, 18720313, 18710324, python, 28798, 28798, fstat, 3, 0xffffffffbfc37970
+victim, 0xffffffffb77bb000, 18745644, 18726080, python, 28798, 28798, mmap2, 0x0, 78079, PROT_READ, MAP_PRIVATE, 3, 0
+victim, 0, 18769405, 18750919, python, 28798, 28798, close, 3
+victim, -2 (ENOENT), 18790613, 18782164, python, 28798, 28798, access, "/etc/ld.so.nohwcap", F_OK
+victim, 3, 18838160, 18811721, python, 28798, 28798, open, "/lib/i386-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC
+victim, 512, 18852944, 18844561, python, 28798, 28798, read, 3, 0xffffffffbfc37ab4, 512
+victim, 0, 18905814, 18878039, python, 28798, 28798, fstat, 3, 0xffffffffbfc379d0
+victim, 0xffffffffb77a0000, 18934225, 18924031, python, 28798, 28798, mmap2, 0x0, 107008, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0
+victim, 0xffffffffb77b7000, 18989809, 18940893, python, 28798, 28798, mmap2, 0xffffffffb77b7000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 90112
+victim, 0xffffffffb77b9000, 19059722, 19027168, python, 28798, 28798, mmap2, 0xffffffffb77b9000, 4608, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0
+victim, 0, 19089139, 19083313, python, 28798, 28798, close, 3
+victim, -2 (ENOENT), 19110644, 19101426, python, 28798, 28798, access, "/etc/ld.so.nohwcap", F_OK
+victim, 3, 19154716, 19139714, python, 28798, 28798, open, "/lib/i386-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC
+victim, 512, 19200658, 19160684, python, 28798, 28798, read, 3, 0xffffffffbfc37a94, 512
+victim, 0, 19245356, 19219631, python, 28798, 28798, fstat, 3, 0xffffffffbfc379b0
+victim, 0xffffffffb779b000, 19300613, 19253048, python, 28798, 28798, mmap2, 0x0, 16504, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0
+victim, 0xffffffffb779e000, 19334536, 19309019, python, 28798, 28798, mmap2, 0xffffffffb779e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 8192
+victim, 0, 19363612, 19355226, python, 28798, 28798, close, 3
+victim, -2 (ENOENT), 19389041, 19378840, python, 28798, 28798, access, "/etc/ld.so.nohwcap", F_OK
+victim, 3, 19429480, 19401859, python, 28798, 28798, open, "/lib/i386-linux-gnu/libutil.so.1", O_RDONLY|O_CLOEXEC
+victim, 512, 19444271, 19435620, python, 28798, 28798, read, 3, 0xffffffffbfc37a74, 512
+victim, 0, 19457304, 19451036, python, 28798, 28798, fstat, 3, 0xffffffffbfc37990
+victim, 0xffffffffb779a000, 19482455, 19474235, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 0xffffffffb7796000, 19530365, 19495342, python, 28798, 28798, mmap2, 0x0, 12420, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0
+victim, 0xffffffffb7798000, 19586296, 19571214, python, 28798, 28798, mmap2, 0xffffffffb7798000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 4096
+victim, 0, 19612265, 19606509, python, 28798, 28798, close, 3
+victim, -2 (ENOENT), 19631601, 19622636, python, 28798, 28798, access, "/etc/ld.so.nohwcap", F_OK
+victim, 3, 19652255, 19639434, python, 28798, 28798, open, "/lib/i386-linux-gnu/libssl.so.1.0.0", O_RDONLY|O_CLOEXEC
+victim, 512, 19666661, 19657826, python, 28798, 28798, read, 3, 0xffffffffbfc37a54, 512
+victim, 0, 19678901, 19672924, python, 28798, 28798, fstat, 3, 0xffffffffbfc37970
+victim, 0xffffffffb773e000, 19694096, 19685289, python, 28798, 28798, mmap2, 0x0, 357324, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0
+victim, 0xffffffffb7790000, 19712349, 19700354, python, 28798, 28798, mmap2, 0xffffffffb7790000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 331776
+victim, 0, 19738090, 19732369, python, 28798, 28798, close, 3
+victim, -2 (ENOENT), 19772265, 19762980, python, 28798, 28798, access, "/etc/ld.so.nohwcap", F_OK
+victim, 3, 19800324, 19786473, python, 28798, 28798, open, "/lib/i386-linux-gnu/libcrypto.so.1.0.0", O_RDONLY|O_CLOEXEC
+victim, 512, 19814646, 19805910, python, 28798, 28798, read, 3, 0xffffffffbfc37a34, 512
+victim, 0, 19826673, 19820800, python, 28798, 28798, fstat, 3, 0xffffffffbfc37950
+victim, 0xffffffffb7592000, 19842075, 19833016, python, 28798, 28798, mmap2, 0x0, 1750864, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0
+victim, 0xffffffffb7725000, 19861315, 19848240, python, 28798, 28798, mmap2, 0xffffffffb7725000, 90112, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 1650688
+victim, 0xffffffffb773b000, 19893960, 19882465, python, 28798, 28798, mmap2, 0xffffffffb773b000, 10064, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0
+victim, 0, 19914119, 19908479, python, 28798, 28798, close, 3
+victim, -2 (ENOENT), 19941789, 19932990, python, 28798, 28798, access, "/etc/ld.so.nohwcap", F_OK
+victim, 3, 19963414, 19949574, python, 28798, 28798, open, "/lib/i386-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC
+victim, 512, 19977701, 19968831, python, 28798, 28798, read, 3, 0xffffffffbfc37a14, 512
+victim, 0, 19989711, 19983834, python, 28798, 28798, fstat, 3, 0xffffffffbfc37930
+victim, 0xffffffffb757c000, 20005889, 19995969, python, 28798, 28798, mmap2, 0x0, 86288, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0
+victim, 0xffffffffb7590000, 20026801, 20012015, python, 28798, 28798, mmap2, 0xffffffffb7590000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 77824
+victim, 0, 20053170, 20047509, python, 28798, 28798, close, 3
+victim, -2 (ENOENT), 20071484, 20063160, python, 28798, 28798, access, "/etc/ld.so.nohwcap", F_OK
+victim, 3, 20102719, 20089549, python, 28798, 28798, open, "/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC
+victim, 512, 20117019, 20109096, python, 28798, 28798, read, 3, 0xffffffffbfc379f4, 512
+victim, 0, 20129267, 20123261, python, 28798, 28798, fstat, 3, 0xffffffffbfc37910
+victim, 0xffffffffb73d3000, 20159927, 20139459, python, 28798, 28798, mmap2, 0x0, 1739484, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0
+victim, 0xffffffffb7576000, 20181297, 20166611, python, 28798, 28798, mmap2, 0xffffffffb7576000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 1716224
+victim, 0xffffffffb7579000, 20216637, 20195139, python, 28798, 28798, mmap2, 0xffffffffb7579000, 10972, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0
+victim, 0, 20247843, 20231347, python, 28798, 28798, close, 3
+victim, -2 (ENOENT), 20281229, 20272889, python, 28798, 28798, access, "/etc/ld.so.nohwcap", F_OK
+victim, 3, 20311216, 20299422, python, 28798, 28798, open, "/lib/i386-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC
+victim, 512, 20325342, 20316932, python, 28798, 28798, read, 3, 0xffffffffbfc379d4, 512
+victim, 0, 20358659, 20331496, python, 28798, 28798, fstat, 3, 0xffffffffbfc378f0
+victim, 0xffffffffb73d2000, 20372663, 20364622, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 0xffffffffb73b4000, 20394917, 20385266, python, 28798, 28798, mmap2, 0x0, 119344, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0
+victim, 0xffffffffb73d0000, 20430396, 20401832, python, 28798, 28798, mmap2, 0xffffffffb73d0000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 110592
+victim, 0, 20456352, 20450589, python, 28798, 28798, close, 3
+victim, -2 (ENOENT), 20501176, 20477346, python, 28798, 28798, access, "/etc/ld.so.nohwcap", F_OK
+victim, 3, 20559504, 20522221, python, 28798, 28798, open, "/lib/i386-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC
+victim, 512, 20584671, 20565635, python, 28798, 28798, read, 3, 0xffffffffbfc379b4, 512
+victim, 0, 20597500, 20591306, python, 28798, 28798, fstat, 3, 0xffffffffbfc378d0
+victim, 0xffffffffb7388000, 20613697, 20604201, python, 28798, 28798, mmap2, 0x0, 176256, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0
+victim, 0xffffffffb73b2000, 20634505, 20619931, python, 28798, 28798, mmap2, 0xffffffffb73b2000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 167936
+victim, 0, 20660536, 20654870, python, 28798, 28798, close, 3
+victim, 0xffffffffb7387000, 20722544, 20714290, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 0xffffffffb7386000, 20744730, 20736831, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 0xffffffffb7345000, 21776292, 21755395, python, 28798, 28798, mmap2, 0x0, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 3, 21983856, 21946609, python, 28798, 28798, open, b7535c0a, O_RDONLY|O_CLOEXEC
+victim, 0, 22006441, 22000001, python, 28798, 28798, fstat, 3, 0xffffffffbfc35ac0
+victim, 0xffffffffb77ce000, 22020825, 22012571, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 1024, 22069691, 22029641, python, 28798, 28798, read, 3, 0xffffffffb77ce000, 1024
+victim, 0, 22130348, 22124296, python, 28798, 28798, close, 3
+victim, 0, 23283654, 23274346, python, 28798, 28798, fstat, 0, 0xffffffffbfc37e68
+victim, 0, 23309464, 23303254, python, 28798, 28798, fstat, 0, 0xffffffffbfc37d80
+victim, 0, 23320634, 23315243, python, 28798, 28798, fstat, 1, 0xffffffffbfc37d80
+victim, 0, 23330739, 23325465, python, 28798, 28798, fstat, 2, 0xffffffffbfc37d80
+victim, -2 (ENOENT), 23407248, 23392233, python, 28798, 28798, stat, "/usr/local/sbin/python", 0xffffffffbfc35da8
+victim, -2 (ENOENT), 23421040, 23413785, python, 28798, 28798, stat, "/usr/local/bin/python", 0xffffffffbfc35da8
+victim, -2 (ENOENT), 23433586, 23426413, python, 28798, 28798, stat, "/usr/sbin/python", 0xffffffffbfc35da8
+victim, 0, 23449604, 23438620, python, 28798, 28798, stat, "/usr/bin/python", 0xffffffffbfc35da8
+victim, -2 (ENOENT), 23485498, 23477399, python, 28798, 28798, stat, "/usr/bin/Modules/Setup", 0xffffffffbfc35da8
+victim, -2 (ENOENT), 23505520, 23496550, python, 28798, 28798, stat, "/usr/bin/lib/python2.7/os.py", 0xffffffffbfc35da8
+victim, -2 (ENOENT), 23541204, 23533236, python, 28798, 28798, stat, "/usr/bin/lib/python2.7/os.pyc", 0xffffffffbfc35ce0
+victim, 0, 23557408, 23547308, python, 28798, 28798, stat, "/usr/lib/python2.7/os.py", 0xffffffffbfc35da8
+victim, -2 (ENOENT), 23576544, 23569118, python, 28798, 28798, stat, "/usr/bin/Modules/Setup", 0xffffffffbfc35da8
+victim, -2 (ENOENT), 23589543, 23582765, python, 28798, 28798, stat, "/usr/bin/lib/python2.7/lib-dynload", 0xffffffffbfc35d00
+victim, 0, 23603545, 23595088, python, 28798, 28798, stat, "/usr/lib/python2.7/lib-dynload", 0xffffffffbfc35d00
+victim, 0, 24331619, 24319496, python, 28798, 28798, stat, "/usr/lib/python2.7/", 0xffffffffbfc309a0
+victim, 0, 24373967, 24364756, python, 28798, 28798, stat, "/usr/lib/python2.7/", 0xffffffffbfc339dc
+victim, -2 (ENOENT), 24388549, 24381187, python, 28798, 28798, stat, "/usr/lib/python2.7/site", 0xffffffffbfc33b98
+victim, -2 (ENOENT), 24409621, 24398501, python, 28798, 28798, open, "/usr/lib/python2.7/site.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 24424798, 24416391, python, 28798, 28798, open, "/usr/lib/python2.7/sitemodule.so", O_RDONLY|O_LARGEFILE
+victim, 3, 24442754, 24430714, python, 28798, 28798, open, "/usr/lib/python2.7/site.py", O_RDONLY|O_LARGEFILE
+victim, 0, 24455020, 24448885, python, 28798, 28798, fstat, 3, 0xffffffffbfc34c28
+victim, 4, 24472776, 24462328, python, 28798, 28798, open, "/usr/lib/python2.7/site.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 24485379, 24479808, python, 28798, 28798, fstat, 4, 0xffffffffbfc34aa0
+victim, 0xffffffffb77ce000, 24500511, 24491915, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 24520364, 24506408, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 0, 24535706, 24529765, python, 28798, 28798, fstat, 4, 0xffffffffbfc34b70
+victim, 12288, 24583948, 24553668, python, 28798, 28798, read, 4, 0x9bccd88, 12288
+victim, 3358, 24598818, 24590418, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 0, 24610285, 24604449, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 0, 24761220, 24754809, python, 28798, 28798, close, 4
+victim, -2 (ENOENT), 24842436, 24832106, python, 28798, 28798, stat, "/usr/lib/python2.7/os", 0xffffffffbfc30738
+victim, -2 (ENOENT), 24860197, 24850452, python, 28798, 28798, open, "/usr/lib/python2.7/os.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 24874726, 24866689, python, 28798, 28798, open, "/usr/lib/python2.7/osmodule.so", O_RDONLY|O_LARGEFILE
+victim, 4, 24892276, 24880724, python, 28798, 28798, open, "/usr/lib/python2.7/os.py", O_RDONLY|O_LARGEFILE
+victim, 0, 24904002, 24897867, python, 28798, 28798, fstat, 4, 0xffffffffbfc317c8
+victim, 5, 24920399, 24909936, python, 28798, 28798, open, "/usr/lib/python2.7/os.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 24931439, 24925931, python, 28798, 28798, fstat, 5, 0xffffffffbfc31640
+victim, 0xffffffffb77ce000, 24945628, 24937412, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 24966536, 24951056, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 24979352, 24973347, python, 28798, 28798, fstat, 5, 0xffffffffbfc31710
+victim, 20480, 25028604, 24993729, python, 28798, 28798, read, 5, 0x9bd3970, 20480
+victim, 875, 25042496, 25034616, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 25053876, 25048042, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 25249211, 25242579, python, 28798, 28798, close, 5
+victim, 0xffffffffb7304000, 25313377, 25304077, python, 28798, 28798, mmap2, 0x0, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, -2 (ENOENT), 25646895, 25635698, python, 28798, 28798, stat, "/usr/lib/python2.7/posixpath", 0xffffffffbfc2d2d8
+victim, -2 (ENOENT), 25664741, 25655379, python, 28798, 28798, open, "/usr/lib/python2.7/posixpath.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 25680001, 25671209, python, 28798, 28798, open, "/usr/lib/python2.7/posixpathmodule.so", O_RDONLY|O_LARGEFILE
+victim, 5, 25698596, 25686159, python, 28798, 28798, open, "/usr/lib/python2.7/posixpath.py", O_RDONLY|O_LARGEFILE
+victim, 0, 25710671, 25704405, python, 28798, 28798, fstat, 5, 0xffffffffbfc2e368
+victim, 6, 25727333, 25716880, python, 28798, 28798, open, "/usr/lib/python2.7/posixpath.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 25738453, 25732986, python, 28798, 28798, fstat, 6, 0xffffffffbfc2e1e0
+victim, 0xffffffffb77ce000, 25752699, 25744431, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 25772076, 25758196, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 25783935, 25777988, python, 28798, 28798, fstat, 6, 0xffffffffbfc2e2b0
+victim, 4096, 25821481, 25803446, python, 28798, 28798, read, 6, 0x9bdedc8, 4096
+victim, 2956, 25835495, 25827481, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 25847020, 25841249, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 25939328, 25933075, python, 28798, 28798, close, 6
+victim, -2 (ENOENT), 26003562, 25993668, python, 28798, 28798, stat, "/usr/lib/python2.7/stat", 0xffffffffbfc29e78
+victim, -2 (ENOENT), 26023768, 26011681, python, 28798, 28798, open, "/usr/lib/python2.7/stat.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 26038147, 26030207, python, 28798, 28798, open, "/usr/lib/python2.7/statmodule.so", O_RDONLY|O_LARGEFILE
+victim, 6, 26056478, 26044457, python, 28798, 28798, open, "/usr/lib/python2.7/stat.py", O_RDONLY|O_LARGEFILE
+victim, 0, 26068229, 26062127, python, 28798, 28798, fstat, 6, 0xffffffffbfc2af08
+victim, 7, 26083836, 26074142, python, 28798, 28798, open, "/usr/lib/python2.7/stat.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 26094802, 26089298, python, 28798, 28798, fstat, 7, 0xffffffffbfc2ad80
+victim, 0xffffffffb77ce000, 26108729, 26100682, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 2731, 26127387, 26114106, python, 28798, 28798, read, 7, 0xffffffffb77ce000, 4096
+victim, 0, 26138993, 26133206, python, 28798, 28798, fstat, 7, 0xffffffffbfc2ae50
+victim, 0, 26150177, 26144416, python, 28798, 28798, read, 7, 0xffffffffb77ce000, 4096
+victim, 0, 26199522, 26193303, python, 28798, 28798, close, 7
+victim, 0, 26234253, 26228162, python, 28798, 28798, close, 6
+victim, -2 (ENOENT), 26256219, 26246983, python, 28798, 28798, stat, "/usr/lib/python2.7/genericpath", 0xffffffffbfc29e78
+victim, -2 (ENOENT), 26272099, 26263411, python, 28798, 28798, open, "/usr/lib/python2.7/genericpath.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 26288198, 26278869, python, 28798, 28798, open, "/usr/lib/python2.7/genericpathmodule.so", O_RDONLY|O_LARGEFILE
+victim, 6, 26306343, 26294371, python, 28798, 28798, open, "/usr/lib/python2.7/genericpath.py", O_RDONLY|O_LARGEFILE
+victim, 0, 26318012, 26311991, python, 28798, 28798, fstat, 6, 0xffffffffbfc2af08
+victim, 7, 26334727, 26324178, python, 28798, 28798, open, "/usr/lib/python2.7/genericpath.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 26345670, 26340261, python, 28798, 28798, fstat, 7, 0xffffffffbfc2ad80
+victim, 0xffffffffb77ce000, 26359566, 26351556, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 3243, 26377372, 26364984, python, 28798, 28798, read, 7, 0xffffffffb77ce000, 4096
+victim, 0, 26389457, 26383339, python, 28798, 28798, fstat, 7, 0xffffffffbfc2ae50
+victim, 0, 26401112, 26395140, python, 28798, 28798, read, 7, 0xffffffffb77ce000, 4096
+victim, 0, 26555366, 26548646, python, 28798, 28798, close, 7
+victim, 0, 26592160, 26586057, python, 28798, 28798, close, 6
+victim, -2 (ENOENT), 26614009, 26605417, python, 28798, 28798, stat, "/usr/lib/python2.7/warnings", 0xffffffffbfc29e78
+victim, -2 (ENOENT), 26629757, 26621067, python, 28798, 28798, open, "/usr/lib/python2.7/warnings.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 26644174, 26636119, python, 28798, 28798, open, "/usr/lib/python2.7/warningsmodule.so", O_RDONLY|O_LARGEFILE
+victim, 6, 26662839, 26650397, python, 28798, 28798, open, "/usr/lib/python2.7/warnings.py", O_RDONLY|O_LARGEFILE
+victim, 0, 26674574, 26668567, python, 28798, 28798, fstat, 6, 0xffffffffbfc2af08
+victim, 7, 26691111, 26680499, python, 28798, 28798, open, "/usr/lib/python2.7/warnings.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 26713974, 26697539, python, 28798, 28798, fstat, 7, 0xffffffffbfc2ad80
+victim, 0xffffffffb77ce000, 26727382, 26719641, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 26746568, 26732934, python, 28798, 28798, read, 7, 0xffffffffb77ce000, 4096
+victim, 0, 26769288, 26752674, python, 28798, 28798, fstat, 7, 0xffffffffbfc2ae50
+victim, 8192, 26784851, 26774776, python, 28798, 28798, read, 7, 0x9bbf040, 8192
+victim, 816, 26798409, 26790428, python, 28798, 28798, read, 7, 0xffffffffb77ce000, 4096
+victim, 0, 26809913, 26804004, python, 28798, 28798, read, 7, 0xffffffffb77ce000, 4096
+victim, 0, 26901470, 26890123, python, 28798, 28798, close, 7
+victim, -2 (ENOENT), 26941821, 26932109, python, 28798, 28798, stat, "/usr/lib/python2.7/linecache", 0xffffffffbfc26a18
+victim, -2 (ENOENT), 26970110, 26949631, python, 28798, 28798, open, "/usr/lib/python2.7/linecache.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 26996453, 26976573, python, 28798, 28798, open, "/usr/lib/python2.7/linecachemodule.so", O_RDONLY|O_LARGEFILE
+victim, 7, 27036930, 27013494, python, 28798, 28798, open, "/usr/lib/python2.7/linecache.py", O_RDONLY|O_LARGEFILE
+victim, 0, 27048776, 27042651, python, 28798, 28798, fstat, 7, 0xffffffffbfc27aa8
+victim, 8, 27076128, 27054868, python, 28798, 28798, open, "/usr/lib/python2.7/linecache.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 27095683, 27090248, python, 28798, 28798, fstat, 8, 0xffffffffbfc27920
+victim, 0xffffffffb77ce000, 27109141, 27101436, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 3240, 27127318, 27114629, python, 28798, 28798, read, 8, 0xffffffffb77ce000, 4096
+victim, 0, 27149951, 27133258, python, 28798, 28798, fstat, 8, 0xffffffffbfc279f0
+victim, 0, 27161368, 27155561, python, 28798, 28798, read, 8, 0xffffffffb77ce000, 4096
+victim, 0, 27197448, 27191544, python, 28798, 28798, close, 8
+victim, 0, 27241154, 27234821, python, 28798, 28798, close, 7
+victim, -2 (ENOENT), 27262542, 27253724, python, 28798, 28798, stat, "/usr/lib/python2.7/types", 0xffffffffbfc26a18
+victim, -2 (ENOENT), 27292454, 27269483, python, 28798, 28798, open, "/usr/lib/python2.7/types.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 27317899, 27298809, python, 28798, 28798, open, "/usr/lib/python2.7/typesmodule.so", O_RDONLY|O_LARGEFILE
+victim, 7, 27334969, 27323879, python, 28798, 28798, open, "/usr/lib/python2.7/types.py", O_RDONLY|O_LARGEFILE
+victim, 0, 27350553, 27340438, python, 28798, 28798, fstat, 7, 0xffffffffbfc27aa8
+victim, 8, 27366521, 27356547, python, 28798, 28798, open, "/usr/lib/python2.7/types.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 27377553, 27372029, python, 28798, 28798, fstat, 8, 0xffffffffbfc27920
+victim, 0xffffffffb77ce000, 27391127, 27383351, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 2494, 27421077, 27396611, python, 28798, 28798, read, 8, 0xffffffffb77ce000, 4096
+victim, 0, 27432778, 27427001, python, 28798, 28798, fstat, 8, 0xffffffffbfc279f0
+victim, 0, 27465682, 27438273, python, 28798, 28798, read, 8, 0xffffffffb77ce000, 4096
+victim, 0, 27496548, 27490828, python, 28798, 28798, close, 8
+victim, 0, 27645232, 27638109, python, 28798, 28798, close, 7
+victim, 0, 27734921, 27728365, python, 28798, 28798, close, 6
+victim, 0, 27767480, 27761547, python, 28798, 28798, close, 5
+victim, -2 (ENOENT), 27911640, 27901354, python, 28798, 28798, stat, "/usr/lib/python2.7/UserDict", 0xffffffffbfc2d2d8
+victim, -2 (ENOENT), 27929265, 27919743, python, 28798, 28798, open, "/usr/lib/python2.7/UserDict.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 27944261, 27935630, python, 28798, 28798, open, "/usr/lib/python2.7/UserDictmodule.so", O_RDONLY|O_LARGEFILE
+victim, 5, 27962675, 27950379, python, 28798, 28798, open, "/usr/lib/python2.7/UserDict.py", O_RDONLY|O_LARGEFILE
+victim, 0, 27975245, 27969069, python, 28798, 28798, fstat, 5, 0xffffffffbfc2e368
+victim, 6, 27991340, 27981225, python, 28798, 28798, open, "/usr/lib/python2.7/UserDict.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 28002449, 27996948, python, 28798, 28798, fstat, 6, 0xffffffffbfc2e1e0
+victim, 0xffffffffb77ce000, 28024450, 28016295, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 28043440, 28029848, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 28055190, 28049374, python, 28798, 28798, fstat, 6, 0xffffffffbfc2e2b0
+victim, 4096, 28068851, 28061005, python, 28798, 28798, read, 6, 0x9bc10d0, 4096
+victim, 538, 28090070, 28074221, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 28101103, 28095454, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 28277004, 28270699, python, 28798, 28798, close, 6
+victim, -2 (ENOENT), 28330396, 28318391, python, 28798, 28798, stat, "/usr/lib/python2.7/_abcoll", 0xffffffffbfc29e78
+victim, -2 (ENOENT), 28347492, 28338251, python, 28798, 28798, open, "/usr/lib/python2.7/_abcoll.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 28361683, 28353763, python, 28798, 28798, open, "/usr/lib/python2.7/_abcollmodule.so", O_RDONLY|O_LARGEFILE
+victim, 6, 28379408, 28367653, python, 28798, 28798, open, "/usr/lib/python2.7/_abcoll.py", O_RDONLY|O_LARGEFILE
+victim, 0, 28391159, 28385091, python, 28798, 28798, fstat, 6, 0xffffffffbfc2af08
+victim, 7, 28407356, 28397319, python, 28798, 28798, open, "/usr/lib/python2.7/_abcoll.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 28418531, 28413021, python, 28798, 28798, fstat, 7, 0xffffffffbfc2ad80
+victim, 0xffffffffb77ce000, 28432029, 28424299, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 28458853, 28437284, python, 28798, 28798, read, 7, 0xffffffffb77ce000, 4096
+victim, 0, 28471512, 28465481, python, 28798, 28798, fstat, 7, 0xffffffffbfc2ae50
+victim, 16384, 28515664, 28485439, python, 28798, 28798, read, 7, 0x9bf9de8, 16384
+victim, 1247, 28529338, 28521651, python, 28798, 28798, read, 7, 0xffffffffb77ce000, 4096
+victim, 0, 28540581, 28534883, python, 28798, 28798, read, 7, 0xffffffffb77ce000, 4096
+victim, 0, 28676115, 28669881, python, 28798, 28798, close, 7
+victim, -2 (ENOENT), 28710162, 28700965, python, 28798, 28798, stat, "/usr/lib/python2.7/abc", 0xffffffffbfc26a18
+victim, -2 (ENOENT), 28726671, 28717392, python, 28798, 28798, open, "/usr/lib/python2.7/abc.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 28741106, 28732901, python, 28798, 28798, open, "/usr/lib/python2.7/abcmodule.so", O_RDONLY|O_LARGEFILE
+victim, 7, 28759054, 28746926, python, 28798, 28798, open, "/usr/lib/python2.7/abc.py", O_RDONLY|O_LARGEFILE
+victim, 0, 28770681, 28764579, python, 28798, 28798, fstat, 7, 0xffffffffbfc27aa8
+victim, 8, 28786239, 28776620, python, 28798, 28798, open, "/usr/lib/python2.7/abc.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 28797215, 28791592, python, 28798, 28798, fstat, 8, 0xffffffffbfc27920
+victim, 0xffffffffb77ce000, 28810640, 28802921, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 28828772, 28816015, python, 28798, 28798, read, 8, 0xffffffffb77ce000, 4096
+victim, 0, 28840512, 28834619, python, 28798, 28798, fstat, 8, 0xffffffffbfc279f0
+victim, 2025, 28854059, 28846126, python, 28798, 28798, read, 8, 0xffffffffb77ce000, 4096
+victim, 0, 28865224, 28859472, python, 28798, 28798, read, 8, 0xffffffffb77ce000, 4096
+victim, 0, 28917004, 28910872, python, 28798, 28798, close, 8
+victim, -2 (ENOENT), 28958042, 28948645, python, 28798, 28798, stat, "/usr/lib/python2.7/_weakrefset", 0xffffffffbfc235b8
+victim, -2 (ENOENT), 28974634, 28965572, python, 28798, 28798, open, "/usr/lib/python2.7/_weakrefset.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 28988740, 28981040, python, 28798, 28798, open, "/usr/lib/python2.7/_weakrefsetmodule.so", O_RDONLY|O_LARGEFILE
+victim, 8, 29006521, 28994844, python, 28798, 28798, open, "/usr/lib/python2.7/_weakrefset.py", O_RDONLY|O_LARGEFILE
+victim, 0, 29017905, 29012022, python, 28798, 28798, fstat, 8, 0xffffffffbfc24648
+victim, 9, 29033900, 29023855, python, 28798, 28798, open, "/usr/lib/python2.7/_weakrefset.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 29044792, 29039275, python, 28798, 28798, fstat, 9, 0xffffffffbfc244c0
+victim, 0xffffffffb77ce000, 29058141, 29050519, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 29076251, 29063415, python, 28798, 28798, read, 9, 0xffffffffb77ce000, 4096
+victim, 0, 29088024, 29082161, python, 28798, 28798, fstat, 9, 0xffffffffbfc24590
+victim, 4096, 29101499, 29093591, python, 28798, 28798, read, 9, 0x9bf9de8, 4096
+victim, 1998, 29114526, 29106900, python, 28798, 28798, read, 9, 0xffffffffb77ce000, 4096
+victim, 0, 29125686, 29119933, python, 28798, 28798, read, 9, 0xffffffffb77ce000, 4096
+victim, 0, 29200239, 29194195, python, 28798, 28798, close, 9
+victim, 0, 29297969, 29291345, python, 28798, 28798, close, 8
+victim, 0, 29363200, 29357043, python, 28798, 28798, close, 7
+victim, 0, 30298953, 30291068, python, 28798, 28798, close, 6
+victim, 0, 30358071, 30351541, python, 28798, 28798, close, 5
+victim, -2 (ENOENT), 30406185, 30395436, python, 28798, 28798, stat, "/usr/lib/python2.7/copy_reg", 0xffffffffbfc2d2d8
+victim, -2 (ENOENT), 30426224, 30414735, python, 28798, 28798, open, "/usr/lib/python2.7/copy_reg.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 30441125, 30432975, python, 28798, 28798, open, "/usr/lib/python2.7/copy_regmodule.so", O_RDONLY|O_LARGEFILE
+victim, 5, 30460176, 30447500, python, 28798, 28798, open, "/usr/lib/python2.7/copy_reg.py", O_RDONLY|O_LARGEFILE
+victim, 0, 30472993, 30466540, python, 28798, 28798, fstat, 5, 0xffffffffbfc2e368
+victim, 6, 30496650, 30486476, python, 28798, 28798, open, "/usr/lib/python2.7/copy_reg.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 30508068, 30502446, python, 28798, 28798, fstat, 6, 0xffffffffbfc2e1e0
+victim, 0xffffffffb77ce000, 30522718, 30514268, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 30552513, 30528615, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 30564516, 30558623, python, 28798, 28798, fstat, 6, 0xffffffffbfc2e2b0
+victim, 995, 30586210, 30578166, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 30597566, 30591773, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 30646306, 30640501, python, 28798, 28798, close, 6
+victim, 0, 30760201, 30753654, python, 28798, 28798, close, 5
+victim, 0, 30783563, 30778118, python, 28798, 28798, close, 4
+victim, -2 (ENOENT), 30805338, 30795956, python, 28798, 28798, stat, "/usr/lib/python2.7/traceback", 0xffffffffbfc30738
+victim, -2 (ENOENT), 30821112, 30812617, python, 28798, 28798, open, "/usr/lib/python2.7/traceback.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 30835358, 30827504, python, 28798, 28798, open, "/usr/lib/python2.7/tracebackmodule.so", O_RDONLY|O_LARGEFILE
+victim, 4, 30853537, 30841493, python, 28798, 28798, open, "/usr/lib/python2.7/traceback.py", O_RDONLY|O_LARGEFILE
+victim, 0, 30865328, 30859253, python, 28798, 28798, fstat, 4, 0xffffffffbfc317c8
+victim, 5, 30881598, 30871257, python, 28798, 28798, open, "/usr/lib/python2.7/traceback.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 30892827, 30887266, python, 28798, 28798, fstat, 5, 0xffffffffbfc31640
+victim, 0xffffffffb77ce000, 30907117, 30898918, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 30938211, 30912481, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 30951198, 30944943, python, 28798, 28798, fstat, 5, 0xffffffffbfc31710
+victim, 4096, 30974257, 30962157, python, 28798, 28798, read, 5, 0x9c00ed8, 4096
+victim, 3391, 30993692, 30985876, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 31004986, 30999203, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 31077151, 31069195, python, 28798, 28798, close, 5
+victim, 0, 31112642, 31106479, python, 28798, 28798, close, 4
+victim, 0, 31401406, 31389427, python, 28798, 28798, stat, "/usr/lib/python2.7", 0xffffffffbfc2d240
+victim, 0, 31425956, 31418524, python, 28798, 28798, stat, "/usr/lib/python2.7", 0xffffffffbfc3027c
+victim, -2 (ENOENT), 31440249, 31431961, python, 28798, 28798, stat, "/usr/lib/python2.7/sysconfig", 0xffffffffbfc30438
+victim, -2 (ENOENT), 31457064, 31447913, python, 28798, 28798, open, "/usr/lib/python2.7/sysconfig.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 31473026, 31464349, python, 28798, 28798, open, "/usr/lib/python2.7/sysconfigmodule.so", O_RDONLY|O_LARGEFILE
+victim, 4, 31491025, 31479174, python, 28798, 28798, open, "/usr/lib/python2.7/sysconfig.py", O_RDONLY|O_LARGEFILE
+victim, 0, 31502719, 31496799, python, 28798, 28798, fstat, 4, 0xffffffffbfc314c8
+victim, 5, 31574436, 31508764, python, 28798, 28798, open, "/usr/lib/python2.7/sysconfig.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 31588125, 31581843, python, 28798, 28798, fstat, 5, 0xffffffffbfc31340
+victim, 0xffffffffb77ce000, 31608065, 31599782, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 31627861, 31614261, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 31640069, 31634091, python, 28798, 28798, fstat, 5, 0xffffffffbfc31410
+victim, 12288, 31685448, 31650666, python, 28798, 28798, read, 5, 0x9c02aa0, 12288
+victim, 2431, 31699981, 31691569, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 31711253, 31705494, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 31847664, 31841287, python, 28798, 28798, close, 5
+victim, -2 (ENOENT), 32046073, 32037102, python, 28798, 28798, stat, "/usr/bin/Modules/Setup.dist", 0xffffffffbfc310dc
+victim, -2 (ENOENT), 32100922, 32092523, python, 28798, 28798, stat, "/usr/bin/Modules/Setup.local", 0xffffffffbfc310dc
+victim, 0, 32127726, 32121669, python, 28798, 28798, close, 4
+victim, -2 (ENOENT), 32151962, 32143537, python, 28798, 28798, stat, "/usr/lib/python2.7/re", 0xffffffffbfc30238
+victim, -2 (ENOENT), 32168553, 32159288, python, 28798, 28798, open, "/usr/lib/python2.7/re.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 32183605, 32174974, python, 28798, 28798, open, "/usr/lib/python2.7/remodule.so", O_RDONLY|O_LARGEFILE
+victim, 4, 32210739, 32189646, python, 28798, 28798, open, "/usr/lib/python2.7/re.py", O_RDONLY|O_LARGEFILE
+victim, 0, 32222706, 32216552, python, 28798, 28798, fstat, 4, 0xffffffffbfc312c8
+victim, 5, 32238612, 32228696, python, 28798, 28798, open, "/usr/lib/python2.7/re.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 32249734, 32244159, python, 28798, 28798, fstat, 5, 0xffffffffbfc31140
+victim, 0xffffffffb77ce000, 32264299, 32255919, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 32295190, 32274617, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 32308245, 32302082, python, 28798, 28798, fstat, 5, 0xffffffffbfc31210
+victim, 8192, 32323580, 32313985, python, 28798, 28798, read, 5, 0x9c04548, 8192
+victim, 764, 32336815, 32329055, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 32347954, 32342230, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 32423449, 32417199, python, 28798, 28798, close, 5
+victim, -2 (ENOENT), 32461124, 32450369, python, 28798, 28798, stat, "/usr/lib/python2.7/sre_compile", 0xffffffffbfc2cdd8
+victim, -2 (ENOENT), 32478224, 32468697, python, 28798, 28798, open, "/usr/lib/python2.7/sre_compile.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 32493397, 32484565, python, 28798, 28798, open, "/usr/lib/python2.7/sre_compilemodule.so", O_RDONLY|O_LARGEFILE
+victim, 5, 32511636, 32499569, python, 28798, 28798, open, "/usr/lib/python2.7/sre_compile.py", O_RDONLY|O_LARGEFILE
+victim, 0, 32523215, 32517225, python, 28798, 28798, fstat, 5, 0xffffffffbfc2de68
+victim, 6, 32539972, 32529109, python, 28798, 28798, open, "/usr/lib/python2.7/sre_compile.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 32551155, 32545579, python, 28798, 28798, fstat, 6, 0xffffffffbfc2dce0
+victim, 0xffffffffb77ce000, 32564859, 32557017, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 32589469, 32576796, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 32601125, 32595260, python, 28798, 28798, fstat, 6, 0xffffffffbfc2ddb0
+victim, 4096, 32621528, 32607008, python, 28798, 28798, read, 6, 0x9c049e0, 4096
+victim, 2837, 32635624, 32627395, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 32647026, 32641195, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 32716594, 32710425, python, 28798, 28798, close, 6
+victim, -2 (ENOENT), 32798279, 32788235, python, 28798, 28798, stat, "/usr/lib/python2.7/sre_parse", 0xffffffffbfc29978
+victim, -2 (ENOENT), 32815185, 32805975, python, 28798, 28798, open, "/usr/lib/python2.7/sre_parse.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 32833574, 32821676, python, 28798, 28798, open, "/usr/lib/python2.7/sre_parsemodule.so", O_RDONLY|O_LARGEFILE
+victim, 6, 32852183, 32839646, python, 28798, 28798, open, "/usr/lib/python2.7/sre_parse.py", O_RDONLY|O_LARGEFILE
+victim, 0, 32863844, 32857814, python, 28798, 28798, fstat, 6, 0xffffffffbfc2aa08
+victim, 7, 32880306, 32869846, python, 28798, 28798, open, "/usr/lib/python2.7/sre_parse.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 32891268, 32885765, python, 28798, 28798, fstat, 7, 0xffffffffbfc2a880
+victim, 0xffffffffb77ce000, 32905173, 32897150, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 32924029, 32910744, python, 28798, 28798, read, 7, 0xffffffffb77ce000, 4096
+victim, 0, 32935545, 32929709, python, 28798, 28798, fstat, 7, 0xffffffffbfc2a950
+victim, 12288, 32983284, 32957539, python, 28798, 28798, read, 7, 0x9c0c1f8, 12288
+victim, 2644, 33000918, 32989443, python, 28798, 28798, read, 7, 0xffffffffb77ce000, 4096
+victim, 0, 33012468, 33006616, python, 28798, 28798, read, 7, 0xffffffffb77ce000, 4096
+victim, 0, 33134559, 33128303, python, 28798, 28798, close, 7
+victim, -2 (ENOENT), 33170981, 33161811, python, 28798, 28798, stat, "/usr/lib/python2.7/sre_constants", 0xffffffffbfc26518
+victim, -2 (ENOENT), 33187097, 33178327, python, 28798, 28798, open, "/usr/lib/python2.7/sre_constants.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 33206311, 33193458, python, 28798, 28798, open, "/usr/lib/python2.7/sre_constantsmodule.so", O_RDONLY|O_LARGEFILE
+victim, 7, 33224426, 33212429, python, 28798, 28798, open, "/usr/lib/python2.7/sre_constants.py", O_RDONLY|O_LARGEFILE
+victim, 0, 33236514, 33230567, python, 28798, 28798, fstat, 7, 0xffffffffbfc275a8
+victim, 8, 33253328, 33242554, python, 28798, 28798, open, "/usr/lib/python2.7/sre_constants.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 33264297, 33258848, python, 28798, 28798, fstat, 8, 0xffffffffbfc27420
+victim, 0xffffffffb77ce000, 33277986, 33270321, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 33296221, 33283301, python, 28798, 28798, read, 8, 0xffffffffb77ce000, 4096
+victim, 0, 33314536, 33308771, python, 28798, 28798, fstat, 8, 0xffffffffbfc274f0
+victim, 1982, 33328047, 33320221, python, 28798, 28798, read, 8, 0xffffffffb77ce000, 4096
+victim, 0, 33339336, 33333574, python, 28798, 28798, read, 8, 0xffffffffb77ce000, 4096
+victim, 0, 33391494, 33385679, python, 28798, 28798, close, 8
+victim, 0, 33466461, 33460069, python, 28798, 28798, close, 7
+victim, 0, 33552804, 33546315, python, 28798, 28798, close, 6
+victim, 0, 33628440, 33621949, python, 28798, 28798, close, 5
+victim, 0, 33730897, 33724146, python, 28798, 28798, close, 4
+victim, 0xffffffffb72c3000, 34070589, 34060008, python, 28798, 28798, mmap2, 0x0, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4, 34876222, 34856696, python, 28798, 28798, open, "/usr/lib/python2.7/config/Makefile", O_RDONLY|O_LARGEFILE
+victim, 0, 34890307, 34883522, python, 28798, 28798, fstat, 4, 0xffffffffbfc34188
+victim, 0, 34904533, 34898715, python, 28798, 28798, fstat, 4, 0xffffffffbfc321a0
+victim, 0xffffffffb77ce000, 34919521, 34910898, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 8192, 34936913, 34925368, python, 28798, 28798, read, 4, 0xffffffffbfc3231c, 8192
+victim, 4096, 34999083, 34989978, python, 28798, 28798, read, 4, 0xffffffffbfc32349, 4096
+victim, 4096, 35016483, 35004700, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 4096, 35057730, 35048908, python, 28798, 28798, read, 4, 0xffffffffbfc32357, 4096
+victim, 4096, 35070995, 35063056, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 4096, 35125923, 35106126, python, 28798, 28798, read, 4, 0xffffffffbfc32371, 4096
+victim, 4096, 35139650, 35131535, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 4096, 35189466, 35180455, python, 28798, 28798, read, 4, 0xffffffffbfc32395, 4096
+victim, 4096, 35203041, 35195176, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 4096, 35242400, 35232905, python, 28798, 28798, read, 4, 0xffffffffbfc323b6, 4096
+victim, 4096, 35255719, 35247765, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 4096, 35288281, 35279578, python, 28798, 28798, read, 4, 0xffffffffbfc323d7, 4096
+victim, 724, 35300979, 35293591, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 0, 35312273, 35306419, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 0, 35357832, 35351356, python, 28798, 28798, close, 4
+victim, 4, 37918929, 37897476, python, 28798, 28798, open, "/usr/include/python2.7/pyconfig.h", O_RDONLY|O_LARGEFILE
+victim, 0, 37934179, 37927216, python, 28798, 28798, fstat, 4, 0xffffffffbfc342c8
+victim, 0, 38525609, 38517519, python, 28798, 28798, fstat, 4, 0xffffffffbfc341a0
+victim, 0xffffffffb77ce000, 38542400, 38532976, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 38569624, 38548701, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 4096, 38780913, 38761033, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 4096, 39017939, 38997596, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 4096, 39232665, 39213312, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 4096, 39483922, 39473645, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 4096, 39721376, 39700478, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 4096, 39930225, 39921605, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 4096, 40177791, 40148904, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 3208, 40369359, 40349101, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 0, 40505276, 40487641, python, 28798, 28798, read, 4, 0xffffffffb77ce000, 4096
+victim, 0, 40524345, 40518164, python, 28798, 28798, close, 4
+victim, -2 (ENOENT), 40793185, 40779008, python, 28798, 28798, stat, "/home/darpa/.local/lib/python2.7/site-packages", 0xffffffffbfc3477c
+victim, -2 (ENOENT), 40835589, 40826901, python, 28798, 28798, stat, "/home/darpa/.local/local/lib/python2.7/dist-packages", 0xffffffffbfc3477c
+victim, -2 (ENOENT), 40859834, 40851876, python, 28798, 28798, stat, "/home/darpa/.local/lib/python2.7/dist-packages", 0xffffffffbfc3477c
+victim, 0, 40904243, 40891134, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages", 0xffffffffbfc3477c
+victim, 0, 41033524, 41015404, python, 28798, 28798, close, 4
+victim, 4, 41090295, 41073956, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/easy-install.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 41135802, 41097468, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 41159229, 41152829, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 41174636, 41165918, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 223, 41188546, 41180202, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 41199359, 41193677, python, 28798, 28798, read, 4, 0x9c17077, 4096
+victim, 0, 41679696, 41666277, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg", 0xffffffffbfc344fc
+victim, 0, 41845202, 41833755, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 41863902, 41857652, python, 28798, 28798, close, 4
+victim, 0, 41900387, 41888072, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages", 0xffffffffbfc3477c
+victim, 0, 42111330, 42104366, python, 28798, 28798, close, 4
+victim, 4, 42208134, 42187226, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/PIL.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 42221278, 42214719, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 42235365, 42229880, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 42250090, 42241604, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4, 42263909, 42255520, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 42274730, 42268998, python, 28798, 28798, read, 4, 0x9c16f9c, 4096
+victim, 0, 42308351, 42297138, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/PIL", 0xffffffffbfc344fc
+victim, 0, 42324383, 42318217, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 42337507, 42331843, python, 28798, 28798, close, 4
+victim, 4, 42380313, 42360961, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/gtk-2.0-pysupport-compat.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 42392609, 42386651, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 42406039, 42400559, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 42419641, 42411864, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 38, 42432831, 42424907, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 42443833, 42438163, python, 28798, 28798, read, 4, 0x9c16fbe, 4096
+victim, -2 (ENOENT), 42473091, 42464524, python, 28798, 28798, stat, "/usr/lib/pymodules/python2.7/gtk-2.0", 0xffffffffbfc344fc
+victim, 0, 42495039, 42488617, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 42507344, 42501723, python, 28798, 28798, close, 4
+victim, 4, 42547856, 42530228, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/lazr.restfulclient-0.12.0-nspkg.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 42560158, 42554128, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 42573531, 42568011, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 42586998, 42579256, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 301, 42600111, 42592158, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 42611006, 42605367, python, 28798, 28798, read, 4, 0x9c170c5, 4096
+victim, 0, 42771321, 42757364, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/lazr/__init__.py", 0xffffffffbfc3437c
+victim, 0, 42793749, 42786759, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 42807017, 42801335, python, 28798, 28798, close, 4
+victim, 4, 42850187, 42832005, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/lazr.uri-1.0.3-nspkg.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 42862786, 42856569, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 42876259, 42870765, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 42890490, 42882309, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 301, 42903664, 42895616, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 42914600, 42908905, python, 28798, 28798, read, 4, 0x9c170c5, 4096
+victim, 0, 43061995, 43049400, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/lazr/__init__.py", 0xffffffffbfc3437c
+victim, 0, 43083614, 43076740, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 43096620, 43090938, python, 28798, 28798, close, 4
+victim, 4, 43137625, 43120741, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/pygst.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 43150095, 43143964, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 43163778, 43158208, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 43177761, 43169729, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 9, 43190778, 43182894, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 43201548, 43195906, python, 28798, 28798, read, 4, 0x9c16fa1, 4096
+victim, 0, 43233738, 43223064, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/gst-0.10", 0xffffffffbfc344fc
+victim, 0, 43250169, 43243879, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 43262499, 43256978, python, 28798, 28798, close, 4
+victim, 4, 43300709, 43284031, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/pygtk.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 43312919, 43306899, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 43326188, 43320654, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 43339735, 43331976, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 8, 43361935, 43344761, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 43373411, 43367558, python, 28798, 28798, read, 4, 0x9c16fa0, 4096
+victim, 0, 43407185, 43396171, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/gtk-2.0", 0xffffffffbfc344fc
+victim, 0, 43422980, 43416751, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 43435440, 43429895, python, 28798, 28798, close, 4
+victim, 4, 43475327, 43457815, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntu-sso-client.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 43488148, 43482129, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 43501289, 43495848, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 43579237, 43506999, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 18, 43594292, 43585999, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 43605488, 43599796, python, 28798, 28798, read, 4, 0x9c16faa, 4096
+victim, 0, 43642266, 43629869, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntu-sso-client", 0xffffffffbfc344fc
+victim, 0, 43658758, 43652547, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 43671404, 43665787, python, 28798, 28798, close, 4
+victim, 4, 43710651, 43694054, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-client.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 43723111, 43717094, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 43736604, 43730987, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 43750206, 43742338, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 17, 43770212, 43755199, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 43781677, 43775868, python, 28798, 28798, read, 4, 0x9c16fa9, 4096
+victim, 0, 43814708, 43804032, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-client", 0xffffffffbfc344fc
+victim, 0, 43830576, 43824379, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 43842997, 43837426, python, 28798, 28798, close, 4
+victim, 4, 43882595, 43865359, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-control-panel.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 43894922, 43888891, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 43908141, 43902639, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 43921580, 43913832, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 24, 43934350, 43926560, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 43945237, 43939561, python, 28798, 28798, read, 4, 0x9c16fb0, 4096
+victim, 0, 43979372, 43968432, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-control-panel", 0xffffffffbfc344fc
+victim, 0, 43996060, 43989705, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 44008485, 44002899, python, 28798, 28798, close, 4
+victim, 4, 44047616, 44030405, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-couch.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 44059946, 44053895, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 44072952, 44067437, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 44086317, 44078640, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 16, 44098990, 44091277, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 44116779, 44111161, python, 28798, 28798, read, 4, 0x9c16fa8, 4096
+victim, 0, 44148211, 44137576, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-couch", 0xffffffffbfc344fc
+victim, 0, 44163337, 44157205, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 44175507, 44169937, python, 28798, 28798, close, 4
+victim, 4, 44213789, 44197695, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-installer.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 44225771, 44219831, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 44238853, 44233366, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 44252000, 44244439, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 20, 44264893, 44256986, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 44275749, 44270091, python, 28798, 28798, read, 4, 0x9c16fac, 4096
+victim, 0, 44307359, 44296679, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-installer", 0xffffffffbfc344fc
+victim, 0, 44322470, 44316403, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 44334861, 44329331, python, 28798, 28798, close, 4
+victim, 4, 44374790, 44356019, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-storage-protocol.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 44386843, 44380893, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 44399871, 44394378, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 44413178, 44405620, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 27, 44442976, 44427135, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 44454385, 44448660, python, 28798, 28798, read, 4, 0x9c16fb3, 4096
+victim, 0, 44493115, 44476978, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-storage-protocol", 0xffffffffbfc344fc
+victim, 0, 44508476, 44502309, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 44520790, 44515300, python, 28798, 28798, close, 4
+victim, 4, 44560205, 44542646, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/zope.interface-3.6.1-nspkg.pth", O_RDONLY|O_LARGEFILE
+victim, 0, 44572409, 44566388, python, 28798, 28798, fstat, 4, 0xffffffffbfc34488
+victim, 0, 44585518, 44580036, python, 28798, 28798, fstat, 4, 0xffffffffbfc34410
+victim, 0xffffffffb77ce000, 44598876, 44591170, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 301, 44617033, 44603843, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 44627943, 44622271, python, 28798, 28798, read, 4, 0x9c170c5, 4096
+victim, 0, 44781619, 44764473, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/zope/__init__.py", 0xffffffffbfc3437c
+victim, 0, 44803151, 44796273, python, 28798, 28798, read, 4, 0x9c16f98, 8192
+victim, 0, 44816212, 44810609, python, 28798, 28798, close, 4
+victim, 0, 44909049, 44896838, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg", 0xffffffffbfc2d3c0
+victim, 0, 44935561, 44927551, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg", 0xffffffffbfc303fc
+victim, -2 (ENOENT), 44950607, 44942516, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/sitecustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 44969668, 44959078, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/sitecustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 44992687, 44977076, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/sitecustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45008243, 44999571, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/sitecustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45023807, 45015096, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/sitecustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45037336, 45029934, python, 28798, 28798, stat, "/usr/lib/python2.7/sitecustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 45057659, 45043397, python, 28798, 28798, open, "/usr/lib/python2.7/sitecustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45071899, 45063730, python, 28798, 28798, open, "/usr/lib/python2.7/sitecustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, 4, 45092704, 45078057, python, 28798, 28798, open, "/usr/lib/python2.7/sitecustomize.py", O_RDONLY|O_LARGEFILE
+victim, 0, 45104904, 45098897, python, 28798, 28798, fstat, 4, 0xffffffffbfc31648
+victim, 5, 45129864, 45119174, python, 28798, 28798, open, "/usr/lib/python2.7/sitecustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 45141211, 45135711, python, 28798, 28798, fstat, 5, 0xffffffffbfc314c0
+victim, 0xffffffffb77ce000, 45155016, 45147007, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 232, 45183189, 45160514, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 45195472, 45189691, python, 28798, 28798, fstat, 5, 0xffffffffbfc31590
+victim, 0, 45206597, 45200856, python, 28798, 28798, read, 5, 0xffffffffb77ce000, 4096
+victim, 0, 45222196, 45216520, python, 28798, 28798, close, 5
+victim, -2 (ENOENT), 45256794, 45246832, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/apport_python_hook", 0xffffffffbfc2d158
+victim, -2 (ENOENT), 45274489, 45264871, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/apport_python_hook.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45290892, 45281596, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/apport_python_hookmodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45306384, 45297724, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/apport_python_hook.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45327832, 45319210, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/apport_python_hook.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45341254, 45334017, python, 28798, 28798, stat, "/usr/lib/python2.7/apport_python_hook", 0xffffffffbfc2d158
+victim, -2 (ENOENT), 45355276, 45347281, python, 28798, 28798, open, "/usr/lib/python2.7/apport_python_hook.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45370019, 45361412, python, 28798, 28798, open, "/usr/lib/python2.7/apport_python_hookmodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45384092, 45376151, python, 28798, 28798, open, "/usr/lib/python2.7/apport_python_hook.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45397821, 45390120, python, 28798, 28798, open, "/usr/lib/python2.7/apport_python_hook.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 45413950, 45405110, python, 28798, 28798, stat, "/usr/lib/python2.7/plat-linux2", 0xffffffffbfc29f60
+victim, 0, 45428498, 45421240, python, 28798, 28798, stat, "/usr/lib/python2.7/plat-linux2", 0xffffffffbfc2cf9c
+victim, -2 (ENOENT), 45442884, 45435039, python, 28798, 28798, stat, "/usr/lib/python2.7/plat-linux2/apport_python_hook", 0xffffffffbfc2d158
+victim, -2 (ENOENT), 45461629, 45453459, python, 28798, 28798, open, "/usr/lib/python2.7/plat-linux2/apport_python_hook.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45476009, 45468031, python, 28798, 28798, open, "/usr/lib/python2.7/plat-linux2/apport_python_hookmodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45490741, 45482401, python, 28798, 28798, open, "/usr/lib/python2.7/plat-linux2/apport_python_hook.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45505509, 45497044, python, 28798, 28798, open, "/usr/lib/python2.7/plat-linux2/apport_python_hook.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 45524343, 45515768, python, 28798, 28798, stat, "/usr/lib/python2.7/lib-tk", 0xffffffffbfc29f60
+victim, 0, 45537831, 45530649, python, 28798, 28798, stat, "/usr/lib/python2.7/lib-tk", 0xffffffffbfc2cf9c
+victim, -2 (ENOENT), 45551653, 45544076, python, 28798, 28798, stat, "/usr/lib/python2.7/lib-tk/apport_python_hook", 0xffffffffbfc2d158
+victim, -2 (ENOENT), 45566189, 45558030, python, 28798, 28798, open, "/usr/lib/python2.7/lib-tk/apport_python_hook.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45586181, 45578236, python, 28798, 28798, open, "/usr/lib/python2.7/lib-tk/apport_python_hookmodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45600090, 45592390, python, 28798, 28798, open, "/usr/lib/python2.7/lib-tk/apport_python_hook.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45614581, 45606199, python, 28798, 28798, open, "/usr/lib/python2.7/lib-tk/apport_python_hook.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45628559, 45621566, python, 28798, 28798, stat, "/usr/lib/python2.7/lib-old", 0xffffffffbfc29f60
+victim, 0, 45646724, 45639606, python, 28798, 28798, stat, "/usr/lib/python2.7", 0xffffffffbfc29f60
+victim, -2 (ENOENT), 45659783, 45653080, python, 28798, 28798, stat, "/usr/lib/python2.7/lib-old", 0xffffffffbfc2cf9c
+victim, 0, 45675723, 45668084, python, 28798, 28798, stat, "/usr/lib/python2.7/lib-dynload", 0xffffffffbfc29f60
+victim, 0, 45689270, 45682029, python, 28798, 28798, stat, "/usr/lib/python2.7/lib-dynload", 0xffffffffbfc2cf9c
+victim, -2 (ENOENT), 45702674, 45695319, python, 28798, 28798, stat, "/usr/lib/python2.7/lib-dynload/apport_python_hook", 0xffffffffbfc2d158
+victim, -2 (ENOENT), 45717978, 45709191, python, 28798, 28798, open, "/usr/lib/python2.7/lib-dynload/apport_python_hook.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45732351, 45724414, python, 28798, 28798, open, "/usr/lib/python2.7/lib-dynload/apport_python_hookmodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45751700, 45738706, python, 28798, 28798, open, "/usr/lib/python2.7/lib-dynload/apport_python_hook.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45766198, 45757990, python, 28798, 28798, open, "/usr/lib/python2.7/lib-dynload/apport_python_hook.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 45780574, 45772811, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages", 0xffffffffbfc29f60
+victim, 0, 45794407, 45787043, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages", 0xffffffffbfc2cf9c
+victim, -2 (ENOENT), 45813409, 45800619, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages/apport_python_hook", 0xffffffffbfc2d158
+victim, -2 (ENOENT), 45828191, 45819998, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/apport_python_hook.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45843403, 45834653, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/apport_python_hookmodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45858062, 45849823, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/apport_python_hook.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45878118, 45864467, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/apport_python_hook.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 45891997, 45884547, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages", 0xffffffffbfc29f60
+victim, 0, 45905691, 45898362, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages", 0xffffffffbfc2cf9c
+victim, -2 (ENOENT), 45919171, 45911834, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/apport_python_hook", 0xffffffffbfc2d158
+victim, -2 (ENOENT), 45940029, 45925622, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/apport_python_hook.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 45954822, 45946459, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/apport_python_hookmodule.so", O_RDONLY|O_LARGEFILE
+victim, 5, 45988648, 45970578, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/apport_python_hook.py", O_RDONLY|O_LARGEFILE
+victim, 0, 46001528, 45995479, python, 28798, 28798, fstat, 5, 0xffffffffbfc2e1e8
+victim, 6, 46020728, 46008162, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/apport_python_hook.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 46031872, 46026432, python, 28798, 28798, fstat, 6, 0xffffffffbfc2e060
+victim, 0xffffffffb77ce000, 46045558, 46037597, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 3271, 46071858, 46050823, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 46087188, 46081041, python, 28798, 28798, fstat, 6, 0xffffffffbfc2e130
+victim, 0, 46099411, 46093548, python, 28798, 28798, read, 6, 0xffffffffb77ce000, 4096
+victim, 0, 46139222, 46133457, python, 28798, 28798, close, 6
+victim, 0, 46169671, 46163651, python, 28798, 28798, close, 5
+victim, 0, 46185577, 46180094, python, 28798, 28798, close, 4
+victim, -2 (ENOENT), 46207900, 46198320, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 46231981, 46215919, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46248011, 46239145, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46263417, 46254961, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46279262, 46270477, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46298820, 46291654, python, 28798, 28798, stat, "/usr/lib/python2.7/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 46312627, 46304805, python, 28798, 28798, open, "/usr/lib/python2.7/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46326269, 46318720, python, 28798, 28798, open, "/usr/lib/python2.7/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46340477, 46332249, python, 28798, 28798, open, "/usr/lib/python2.7/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46354577, 46346642, python, 28798, 28798, open, "/usr/lib/python2.7/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46367609, 46360470, python, 28798, 28798, stat, "/usr/lib/python2.7/plat-linux2/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 46381487, 46373717, python, 28798, 28798, open, "/usr/lib/python2.7/plat-linux2/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46396111, 46387737, python, 28798, 28798, open, "/usr/lib/python2.7/plat-linux2/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46414064, 46402550, python, 28798, 28798, open, "/usr/lib/python2.7/plat-linux2/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46428039, 46420279, python, 28798, 28798, open, "/usr/lib/python2.7/plat-linux2/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46441752, 46433959, python, 28798, 28798, stat, "/usr/lib/python2.7/lib-tk/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 46455427, 46447704, python, 28798, 28798, open, "/usr/lib/python2.7/lib-tk/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46477171, 46461650, python, 28798, 28798, open, "/usr/lib/python2.7/lib-tk/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46491822, 46483377, python, 28798, 28798, open, "/usr/lib/python2.7/lib-tk/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46505711, 46497942, python, 28798, 28798, open, "/usr/lib/python2.7/lib-tk/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46521734, 46513852, python, 28798, 28798, stat, "/usr/lib/python2.7/lib-dynload/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 46536330, 46527932, python, 28798, 28798, open, "/usr/lib/python2.7/lib-dynload/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46550987, 46542674, python, 28798, 28798, open, "/usr/lib/python2.7/lib-dynload/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46571014, 46557242, python, 28798, 28798, open, "/usr/lib/python2.7/lib-dynload/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46585528, 46577479, python, 28798, 28798, open, "/usr/lib/python2.7/lib-dynload/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46599003, 46591698, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 46614131, 46605500, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46628710, 46620504, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46642973, 46635210, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46661091, 46649319, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46695958, 46667071, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 46710863, 46702029, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46725185, 46717345, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46739575, 46731418, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46753690, 46745831, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 46769868, 46761093, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/PIL", 0xffffffffbfc2d3c0
+victim, 0, 46784505, 46777131, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/PIL", 0xffffffffbfc303fc
+victim, -2 (ENOENT), 46798210, 46790740, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/PIL/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 46813123, 46804705, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/PIL/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46828294, 46819584, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/PIL/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46849003, 46841054, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/PIL/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46863625, 46855299, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/PIL/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 46878374, 46870434, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/gst-0.10", 0xffffffffbfc2d3c0
+victim, 0, 46892730, 46885071, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/gst-0.10", 0xffffffffbfc303fc
+victim, -2 (ENOENT), 46907075, 46898949, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/gst-0.10/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 46921933, 46913603, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/gst-0.10/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46948535, 46928541, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/gst-0.10/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46963529, 46955043, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/gst-0.10/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 46986011, 46978034, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/gst-0.10/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 47000538, 46992534, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/gtk-2.0", 0xffffffffbfc2d3c0
+victim, 0, 47036433, 47007242, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/gtk-2.0", 0xffffffffbfc303fc
+victim, -2 (ENOENT), 47072391, 47064026, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/gtk-2.0/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 47087711, 47079123, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/gtk-2.0/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47113543, 47105084, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/gtk-2.0/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47128544, 47119901, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/gtk-2.0/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47153489, 47134903, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/gtk-2.0/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 47179359, 47160262, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntu-sso-client", 0xffffffffbfc2d3c0
+victim, 0, 47204414, 47185951, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntu-sso-client", 0xffffffffbfc303fc
+victim, -2 (ENOENT), 47261382, 47221403, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntu-sso-client/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 47288264, 47268173, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntu-sso-client/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47347614, 47295431, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntu-sso-client/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47363382, 47354445, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntu-sso-client/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47389640, 47370106, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntu-sso-client/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 47434444, 47415615, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-client", 0xffffffffbfc2d3c0
+victim, 0, 47448982, 47441405, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-client", 0xffffffffbfc303fc
+victim, -2 (ENOENT), 47462869, 47455441, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-client/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 47478229, 47469620, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-client/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47493085, 47484900, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-client/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47508310, 47499850, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-client/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47553139, 47542896, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-client/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 47591569, 47561392, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-control-panel", 0xffffffffbfc2d3c0
+victim, 0, 47620886, 47602364, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-control-panel", 0xffffffffbfc303fc
+victim, -2 (ENOENT), 47635584, 47627645, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-control-panel/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 47652054, 47642620, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-control-panel/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47667974, 47658875, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-control-panel/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47684251, 47674622, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-control-panel/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47699484, 47691001, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-control-panel/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 47714310, 47706491, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-couch", 0xffffffffbfc2d3c0
+victim, 0, 47728491, 47720985, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-couch", 0xffffffffbfc303fc
+victim, -2 (ENOENT), 47744301, 47736632, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-couch/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 47759601, 47750964, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-couch/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47775596, 47766220, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-couch/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47809916, 47782061, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-couch/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47824984, 47816406, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-couch/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 47840086, 47832004, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-installer", 0xffffffffbfc2d3c0
+victim, 0, 47865426, 47846946, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-installer", 0xffffffffbfc303fc
+victim, -2 (ENOENT), 47890974, 47872046, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-installer/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 47913466, 47898075, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-installer/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47939659, 47920290, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-installer/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47955140, 47946404, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-installer/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 47975784, 47961866, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-installer/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 48012693, 47982926, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-storage-protocol", 0xffffffffbfc2d3c0
+victim, 0, 48027991, 48019989, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-storage-protocol", 0xffffffffbfc303fc
+victim, -2 (ENOENT), 48045353, 48037193, python, 28798, 28798, stat, "/usr/lib/python2.7/dist-packages/ubuntuone-storage-protocol/usercustomize", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 48072333, 48052355, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-storage-protocol/usercustomize.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48120925, 48100623, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-storage-protocol/usercustomizemodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48147904, 48127749, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-storage-protocol/usercustomize.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48163651, 48154791, python, 28798, 28798, open, "/usr/lib/python2.7/dist-packages/ubuntuone-storage-protocol/usercustomize.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 48189293, 48183353, python, 28798, 28798, close, 3
+victim, 3, 48245324, 48228002, python, 28798, 28798, open, b75378a0, O_RDONLY|O_LARGEFILE|O_CLOEXEC
+victim, 0, 48257721, 48251456, python, 28798, 28798, fstat, 3, 0xffffffffb7579040
+victim, 0xffffffffb70c3000, 48296886, 48263656, python, 28798, 28798, mmap2, 0x0, 2097152, PROT_READ, MAP_PRIVATE, 3, 0
+victim, 0xffffffffb77ce000, 48327809, 48318517, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ, MAP_PRIVATE, 3, 6160384
+victim, 0, 48338292, 48332973, python, 28798, 28798, close, 3
+victim, -2 (ENOENT), 48386083, 48375853, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/encodings", 0xffffffffbfc33bf8
+victim, -2 (ENOENT), 48425501, 48394412, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/encodings.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48441846, 48432894, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/encodingsmodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48457513, 48448771, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/encodings.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48472803, 48464126, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/encodings.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 48487286, 48478717, python, 28798, 28798, stat, "/usr/lib/python2.7/encodings", 0xffffffffbfc33bf8
+victim, 0, 48501051, 48492566, python, 28798, 28798, stat, "/usr/lib/python2.7/encodings/__init__.py", 0xffffffffbfc33c58
+victim, -2 (ENOENT), 48523735, 48515602, python, 28798, 28798, stat, "/usr/lib/python2.7/encodings/__init__", 0xffffffffbfc32ba8
+victim, -2 (ENOENT), 48541145, 48530372, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/__init__.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48555781, 48547696, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/__init__module.so", O_RDONLY|O_LARGEFILE
+victim, 3, 48578300, 48561885, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/__init__.py", O_RDONLY|O_LARGEFILE
+victim, 0, 48596536, 48587524, python, 28798, 28798, fstat, 3, 0xffffffffbfc33c38
+victim, 4, 48626922, 48604961, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/__init__.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 48638810, 48633100, python, 28798, 28798, fstat, 4, 0xffffffffbfc33ab0
+victim, 0xffffffffb77cd000, 48652894, 48644591, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 48673570, 48658362, python, 28798, 28798, read, 4, 0xffffffffb77cd000, 4096
+victim, 0, 48692401, 48686564, python, 28798, 28798, fstat, 4, 0xffffffffbfc33b80
+victim, 274, 48706251, 48698214, python, 28798, 28798, read, 4, 0xffffffffb77cd000, 4096
+victim, 0, 48717440, 48711756, python, 28798, 28798, read, 4, 0xffffffffb77cd000, 4096
+victim, 0, 48759232, 48753466, python, 28798, 28798, close, 4
+victim, 0, 48794231, 48784042, python, 28798, 28798, stat, "/usr/lib/python2.7/encodings", 0xffffffffbfc2c550
+victim, 0, 48809065, 48801815, python, 28798, 28798, stat, "/usr/lib/python2.7/encodings", 0xffffffffbfc2f58c
+victim, -2 (ENOENT), 48822472, 48815061, python, 28798, 28798, stat, "/usr/lib/python2.7/encodings/codecs", 0xffffffffbfc2f748
+victim, -2 (ENOENT), 48845417, 48835754, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/codecs.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48860385, 48852005, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/codecsmodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48874276, 48866515, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/codecs.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48897975, 48880306, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/codecs.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48916500, 48908140, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/codecs", 0xffffffffbfc2f748
+victim, -2 (ENOENT), 48932291, 48923331, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/codecs.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48948361, 48939024, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/codecsmodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48963950, 48955003, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/codecs.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48978726, 48970464, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/codecs.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 48991644, 48984571, python, 28798, 28798, stat, "/usr/lib/python2.7/codecs", 0xffffffffbfc2f748
+victim, -2 (ENOENT), 49004881, 48997376, python, 28798, 28798, open, "/usr/lib/python2.7/codecs.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 49024615, 49010804, python, 28798, 28798, open, "/usr/lib/python2.7/codecsmodule.so", O_RDONLY|O_LARGEFILE
+victim, 4, 49042656, 49030560, python, 28798, 28798, open, "/usr/lib/python2.7/codecs.py", O_RDONLY|O_LARGEFILE
+victim, 0, 49054011, 49048198, python, 28798, 28798, fstat, 4, 0xffffffffbfc307d8
+victim, 5, 49071354, 49060034, python, 28798, 28798, open, "/usr/lib/python2.7/codecs.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 49090156, 49084671, python, 28798, 28798, fstat, 5, 0xffffffffbfc30650
+victim, 0xffffffffb77cd000, 49103688, 49095813, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 49122244, 49108918, python, 28798, 28798, read, 5, 0xffffffffb77cd000, 4096
+victim, 0, 49133950, 49128140, python, 28798, 28798, fstat, 5, 0xffffffffbfc30720
+victim, 28672, 49186725, 49152281, python, 28798, 28798, read, 5, 0x9c33f00, 28672
+victim, 3646, 49201238, 49192986, python, 28798, 28798, read, 5, 0xffffffffb77cd000, 4096
+victim, 0, 49212576, 49206831, python, 28798, 28798, read, 5, 0xffffffffb77cd000, 4096
+victim, 0, 49410854, 49404363, python, 28798, 28798, close, 5
+victim, 0, 49618726, 49611826, python, 28798, 28798, close, 4
+victim, -2 (ENOENT), 49641716, 49632223, python, 28798, 28798, stat, "/usr/lib/python2.7/encodings/encodings", 0xffffffffbfc2f748
+victim, -2 (ENOENT), 49658512, 49649728, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/encodings.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 49673761, 49665012, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/encodingsmodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 49687772, 49679972, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/encodings.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 49701754, 49693929, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/encodings.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 49727106, 49719652, python, 28798, 28798, stat, "/usr/lib/python2.7/encodings/aliases", 0xffffffffbfc2f738
+victim, -2 (ENOENT), 49741846, 49733321, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/aliases.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 49756405, 49748079, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/aliasesmodule.so", O_RDONLY|O_LARGEFILE
+victim, 4, 49783565, 49762479, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/aliases.py", O_RDONLY|O_LARGEFILE
+victim, 0, 49795304, 49789166, python, 28798, 28798, fstat, 4, 0xffffffffbfc307c8
+victim, 5, 49812456, 49801505, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/aliases.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 49823526, 49818054, python, 28798, 28798, fstat, 5, 0xffffffffbfc30640
+victim, 0xffffffffb77cd000, 49837607, 49829425, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 49857647, 49843015, python, 28798, 28798, read, 5, 0xffffffffb77cd000, 4096
+victim, 0, 49869531, 49863695, python, 28798, 28798, fstat, 5, 0xffffffffbfc30710
+victim, 4096, 49883047, 49874894, python, 28798, 28798, read, 5, 0x9c38b40, 4096
+victim, 576, 49895852, 49888406, python, 28798, 28798, read, 5, 0xffffffffb77cd000, 4096
+victim, 0, 49906947, 49901226, python, 28798, 28798, read, 5, 0xffffffffb77cd000, 4096
+victim, 0, 50027436, 50021017, python, 28798, 28798, close, 5
+victim, 0, 50074441, 50068447, python, 28798, 28798, close, 4
+victim, -2 (ENOENT), 50098178, 50088828, python, 28798, 28798, stat, "/usr/lib/python2.7/encodings/__builtin__", 0xffffffffbfc2f748
+victim, -2 (ENOENT), 50114104, 50105574, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/__builtin__.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 50133516, 50125548, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/__builtin__module.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 50147795, 50139791, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/__builtin__.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 50162434, 50154099, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/__builtin__.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 50225751, 50219384, python, 28798, 28798, close, 3
+victim, -2 (ENOENT), 50270431, 50260884, python, 28798, 28798, stat, "/usr/lib/python2.7/encodings/utf_8", 0xffffffffbfc339d8
+victim, -2 (ENOENT), 50286724, 50277811, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/utf_8.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 50301135, 50293269, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/utf_8module.so", O_RDONLY|O_LARGEFILE
+victim, 3, 50325025, 50312436, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/utf_8.py", O_RDONLY|O_LARGEFILE
+victim, 0, 50336739, 50330678, python, 28798, 28798, fstat, 3, 0xffffffffbfc34a68
+victim, 4, 50353139, 50342876, python, 28798, 28798, open, "/usr/lib/python2.7/encodings/utf_8.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 50364099, 50358645, python, 28798, 28798, fstat, 4, 0xffffffffbfc348e0
+victim, 0xffffffffb77cd000, 50382299, 50374205, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 1950, 50402214, 50387749, python, 28798, 28798, read, 4, 0xffffffffb77cd000, 4096
+victim, 0, 50414076, 50408246, python, 28798, 28798, fstat, 4, 0xffffffffbfc349b0
+victim, 0, 50425934, 50420263, python, 28798, 28798, read, 4, 0xffffffffb77cd000, 4096
+victim, 0, 50451986, 50446244, python, 28798, 28798, close, 4
+victim, 0, 50529169, 50522534, python, 28798, 28798, close, 3
+victim, 0, 50623947, 50614836, python, 28798, 28798, stat, "test4.py", 0xffffffffbfc34dc0
+victim, 3, 50646217, 50633459, python, 28798, 28798, open, "test4.py", O_RDONLY|O_LARGEFILE
+victim, 0, 50664356, 50658084, python, 28798, 28798, fstat, 3, 0xffffffffbfc34b50
+victim, 0xffffffffb77cd000, 50678729, 50670457, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 0, 50689146, 50683746, python, 28798, 28798, fstat, 3, 0xffffffffbfc34c20
+victim, 377, 50715837, 50703414, python, 28798, 28798, read, 3, 0xffffffffb77cd000, 377
+victim, 22, 50731662, 50724206, python, 28798, 28798, read, 3, 0xffffffffb77cd000, 4096
+victim, 0, 50743137, 50737537, python, 28798, 28798, close, 3
+victim, 0, 50770616, 50760019, python, 28798, 28798, stat, "test4.py", 0xffffffffbfc37dfc
+victim, 3, 50789142, 50777609, python, 28798, 28798, open, "test4.py", O_RDONLY|O_LARGEFILE
+victim, 0, 50800192, 50794574, python, 28798, 28798, fstat, 3, 0xffffffffbfc37f98
+victim, 0, 50819402, 50813386, python, 28798, 28798, fstat, 3, 0xffffffffbfc37cd0
+victim, 0xffffffffb77cd000, 50835402, 50827629, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 399, 50853345, 50841557, python, 28798, 28798, read, 3, 0xffffffffb77cd000, 4096
+victim, 0, 50972954, 50964116, python, 28798, 28798, read, 3, 0xffffffffb77cd000, 4096
+victim, 0, 51020236, 51014226, python, 28798, 28798, close, 3
+victim, 0, 51096506, 51084265, python, 28798, 28798, stat, "/home/darpa/Desktop/dependency-explosion", 0xffffffffbfc30820
+victim, 0, 51112546, 51104857, python, 28798, 28798, stat, "/home/darpa/Desktop/dependency-explosion", 0xffffffffbfc3385c
+victim, -2 (ENOENT), 51126752, 51119105, python, 28798, 28798, stat, "/home/darpa/Desktop/dependency-explosion/random", 0xffffffffbfc33a18
+victim, -2 (ENOENT), 51144065, 51134320, python, 28798, 28798, open, "/home/darpa/Desktop/dependency-explosion/random.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51159546, 51150940, python, 28798, 28798, open, "/home/darpa/Desktop/dependency-explosion/randommodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51174419, 51166046, python, 28798, 28798, open, "/home/darpa/Desktop/dependency-explosion/random.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51188965, 51180750, python, 28798, 28798, open, "/home/darpa/Desktop/dependency-explosion/random.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51204039, 51195404, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/random", 0xffffffffbfc33a18
+victim, -2 (ENOENT), 51219349, 51210607, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/random.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51235352, 51226067, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/randommodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51250605, 51242074, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/random.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51266129, 51257285, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/random.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51279426, 51272186, python, 28798, 28798, stat, "/usr/lib/python2.7/random", 0xffffffffbfc33a18
+victim, -2 (ENOENT), 51293836, 51285290, python, 28798, 28798, open, "/usr/lib/python2.7/random.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51307259, 51299728, python, 28798, 28798, open, "/usr/lib/python2.7/randommodule.so", O_RDONLY|O_LARGEFILE
+victim, 3, 51324786, 51313113, python, 28798, 28798, open, "/usr/lib/python2.7/random.py", O_RDONLY|O_LARGEFILE
+victim, 0, 51336576, 51330703, python, 28798, 28798, fstat, 3, 0xffffffffbfc34aa8
+victim, 4, 51352103, 51342514, python, 28798, 28798, open, "/usr/lib/python2.7/random.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 51363065, 51357580, python, 28798, 28798, fstat, 4, 0xffffffffbfc34920
+victim, 0xffffffffb77cd000, 51376770, 51368804, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 51396499, 51382205, python, 28798, 28798, read, 4, 0xffffffffb77cd000, 4096
+victim, 0, 51408566, 51402709, python, 28798, 28798, fstat, 4, 0xffffffffbfc349f0
+victim, 20480, 51452805, 51419128, python, 28798, 28798, read, 4, 0x9c3f180, 20480
+victim, 975, 51466946, 51459010, python, 28798, 28798, read, 4, 0xffffffffb77cd000, 4096
+victim, 0, 51478184, 51472466, python, 28798, 28798, read, 4, 0xffffffffb77cd000, 4096
+victim, 0, 51625413, 51618774, python, 28798, 28798, close, 4
+victim, -2 (ENOENT), 51669329, 51656084, python, 28798, 28798, stat, "/home/darpa/Desktop/dependency-explosion/__future__", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 51696728, 51681071, python, 28798, 28798, open, "/home/darpa/Desktop/dependency-explosion/__future__.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51720083, 51708464, python, 28798, 28798, open, "/home/darpa/Desktop/dependency-explosion/__future__module.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51736157, 51727891, python, 28798, 28798, open, "/home/darpa/Desktop/dependency-explosion/__future__.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51750757, 51742641, python, 28798, 28798, open, "/home/darpa/Desktop/dependency-explosion/__future__.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51766833, 51757933, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/__future__", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 51782663, 51773569, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/__future__.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51798813, 51789554, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/__future__module.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51813799, 51805504, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/__future__.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51829114, 51820444, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/__future__.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51842097, 51835054, python, 28798, 28798, stat, "/usr/lib/python2.7/__future__", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 51855797, 51847974, python, 28798, 28798, open, "/usr/lib/python2.7/__future__.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 51869316, 51861783, python, 28798, 28798, open, "/usr/lib/python2.7/__future__module.so", O_RDONLY|O_LARGEFILE
+victim, 4, 51887573, 51875181, python, 28798, 28798, open, "/usr/lib/python2.7/__future__.py", O_RDONLY|O_LARGEFILE
+victim, 0, 51899774, 51893567, python, 28798, 28798, fstat, 4, 0xffffffffbfc31648
+victim, 5, 51915868, 51905933, python, 28798, 28798, open, "/usr/lib/python2.7/__future__.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 51926926, 51921469, python, 28798, 28798, fstat, 5, 0xffffffffbfc314c0
+victim, 0xffffffffb77cd000, 51941371, 51932847, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 51960804, 51946791, python, 28798, 28798, read, 5, 0xffffffffb77cd000, 4096
+victim, 0, 51972823, 51966944, python, 28798, 28798, fstat, 5, 0xffffffffbfc31590
+victim, 125, 51986023, 51978693, python, 28798, 28798, read, 5, 0xffffffffb77cd000, 4096
+victim, 0, 51997307, 51991598, python, 28798, 28798, read, 5, 0xffffffffb77cd000, 4096
+victim, 0, 52027601, 52021715, python, 28798, 28798, close, 5
+victim, 0, 52067426, 52061267, python, 28798, 28798, close, 4
+victim, -2 (ENOENT), 52181077, 52170321, python, 28798, 28798, stat, "/home/darpa/Desktop/dependency-explosion/hashlib", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 52198780, 52189486, python, 28798, 28798, open, "/home/darpa/Desktop/dependency-explosion/hashlib.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 52213750, 52205487, python, 28798, 28798, open, "/home/darpa/Desktop/dependency-explosion/hashlibmodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 52228110, 52220069, python, 28798, 28798, open, "/home/darpa/Desktop/dependency-explosion/hashlib.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 52242710, 52234485, python, 28798, 28798, open, "/home/darpa/Desktop/dependency-explosion/hashlib.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 52257419, 52249076, python, 28798, 28798, stat, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/hashlib", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 52272897, 52263941, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/hashlib.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 52287891, 52279499, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/hashlibmodule.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 52303400, 52294476, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/hashlib.py", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 52318636, 52309960, python, 28798, 28798, open, "/usr/local/lib/python2.7/dist-packages/selenium-2.48.0-py2.7.egg/hashlib.pyc", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 52332055, 52324580, python, 28798, 28798, stat, "/usr/lib/python2.7/hashlib", 0xffffffffbfc305b8
+victim, -2 (ENOENT), 52345370, 52337841, python, 28798, 28798, open, "/usr/lib/python2.7/hashlib.so", O_RDONLY|O_LARGEFILE
+victim, -2 (ENOENT), 52359047, 52351206, python, 28798, 28798, open, "/usr/lib/python2.7/hashlibmodule.so", O_RDONLY|O_LARGEFILE
+victim, 4, 52376680, 52364965, python, 28798, 28798, open, "/usr/lib/python2.7/hashlib.py", O_RDONLY|O_LARGEFILE
+victim, 0, 52388400, 52382405, python, 28798, 28798, fstat, 4, 0xffffffffbfc31648
+victim, 5, 52404264, 52394486, python, 28798, 28798, open, "/usr/lib/python2.7/hashlib.pyc", O_RDONLY|O_LARGEFILE
+victim, 0, 52415588, 52409866, python, 28798, 28798, fstat, 5, 0xffffffffbfc314c0
+victim, 0xffffffffb77cd000, 52429534, 52421455, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 4096, 52449144, 52434876, python, 28798, 28798, read, 5, 0xffffffffb77cd000, 4096
+victim, 0, 52460960, 52455108, python, 28798, 28798, fstat, 5, 0xffffffffbfc31590
+victim, 302, 52474018, 52466585, python, 28798, 28798, read, 5, 0xffffffffb77cd000, 4096
+victim, 0, 52485271, 52479531, python, 28798, 28798, read, 5, 0xffffffffb77cd000, 4096
+victim, 0, 52515604, 52509731, python, 28798, 28798, close, 5
+victim, 0, 52722210, 52715221, python, 28798, 28798, close, 4
+victim, 4, 52931806, 52907256, python, 28798, 28798, open, "/dev/urandom", O_RDONLY|O_LARGEFILE
+victim, 16, 52951571, 52939708, python, 28798, 28798, read, 4, 0xffffffffb72e882c, 16
+victim, 0, 52962339, 52956958, python, 28798, 28798, close, 4
+victim, 0, 53023421, 53016897, python, 28798, 28798, close, 3
+victim, 3, 53108369, 53039146, python, 28798, 28798, open, "in1", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666
+victim, 0, 53122154, 53115879, python, 28798, 28798, fstat, 3, 0xffffffffbfc37b68
+victim, 0, 53138709, 53133124, python, 28798, 28798, fstat, 3, 0xffffffffbfc37b60
+victim, 0xffffffffb77cd000, 53165668, 53145240, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 12, 53216709, 53181021, python, 28798, 28798, write, 3, "hello world!", 12
+victim, 0, 53229013, 53223434, python, 28798, 28798, close, 3
+victim, 3, 53273784, 53250144, python, 28798, 28798, open, "in1", O_RDONLY|O_LARGEFILE
+victim, 0, 53285824, 53279307, python, 28798, 28798, fstat, 3, 0xffffffffbfc37b68
+victim, 0, 53314779, 53308409, python, 28798, 28798, fstat, 3, 0xffffffffbfc37c50
+victim, 0, 53327704, 53322112, python, 28798, 28798, fstat, 3, 0xffffffffbfc37a50
+victim, 0xffffffffb77cd000, 53341560, 53333327, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 12, 53360810, 53348500, python, 28798, 28798, read, 3, 0xffffffffb77cd000, 4096
+victim, 0, 53372820, 53366762, python, 28798, 28798, read, 3, 0xffffffffb77cd000, 4096
+victim, 0, 53384802, 53379307, python, 28798, 28798, close, 3
+victim, 3, 53471179, 53436434, python, 28798, 28798, open, "out", O_WRONLY|O_CREAT|O_TRUNC|O_LARGEFILE, 0666
+victim, 0, 53484169, 53478190, python, 28798, 28798, fstat, 3, 0xffffffffbfc37b68
+victim, 0, 53496416, 53490992, python, 28798, 28798, fstat, 3, 0xffffffffbfc37b60
+victim, 0xffffffffb77cd000, 53510407, 53502181, python, 28798, 28798, mmap2, 0x0, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0
+victim, 18, 53544609, 53523811, python, 28798, 28798, write, 3, "293847236424518412", 18
+victim, 0, 53556222, 53550586, python, 28798, 28798, close, 3
+
+ 930 syscalls called
+ 930 syscalls return logged
+
+ Evaluatio runtime= 177353205
+
+ latency= 6910170
+
+ Evaluatio overhead= 3
