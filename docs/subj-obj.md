@@ -4,11 +4,12 @@ Principal
 Info           | Provided
 ---------------|----------
 uuid           | V
+hostId         | V
 type           | PRINCIPAL_LOCAL
 userId         | V
-username       | V
+username       | X
 groupIDs       | V
-properties     | username, groupname, cred (uid/euid/suid/fsuid/gid/egid/sgid/fsgid)
+properties     | cred (uid/euid/suid/fsuid/gid/egid/sgid/fsgid)
 
 
 Subject
@@ -17,14 +18,14 @@ Subject
 Info           | Provided
 ---------------|----------
 uuid           | V
-properties     | inode, minor, major, generation, path
+hostId         | V
+properties     | filepath, ppid
 type           | PROCESS
 cid            | V
 parentSubject  | V
 localPrincipal | V
 startTimeStamp | V
 cmdLine        | executable path (arguments are not available for now)
-properties     | username, groupname, cred
 unitId         | X
 iteration      | X
 count          | X
@@ -41,8 +42,9 @@ FileObject
 Info           | Provided
 ---------------|----------
 uuid           | V
+hostId         | V
 properties     | inode, minor, major, generation, path, version (will be provided)
-type           | FILE or NAMED_PIPE
+type           | FILE_OBJECT_FILE
 epoch          | X
 permission     | X
 fileDescriptor | X
@@ -60,6 +62,7 @@ NetFlowObject
 Info           | Provided
 ---------------|----------
 uuid           | V
+hostId         | V
 localAddress   | V 
 localPort      | V
 remoteAddress  | V
@@ -75,10 +78,11 @@ MemoryObject
 Info           | Provided
 ---------------|----------
 uuid           | V
+hostId         | V
 memoryAddress  | V
-properties     | length, protection (N/A), offset (N/A), validity
+properties     | X
 epoch          | X
-size           | X
+size           | V
 pageNumber     | X
 pageOffset     | X
 
