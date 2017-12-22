@@ -1,0 +1,5 @@
+#simp_file
+To test the basic taintting of file operations
+
+#auto-tag
+To test the auto source and sink identification.

@@ -1,0 +1,13 @@
+digraph d {
+layout=sfdp;
+overlap=scalexy;
+"28781_0" [label= "python"]
+"out" [shape =box]
+"in1" [shape =box]
+
+
+"28781_0" -> "in1" [style=dotted label="1. open"]
+"in1" -> "28781_0" [label="2. read"]
+"28781_0" -> "out" [style=dotted label="3. open"]
+"28781_0" -> "out" [label="4. write"]
+}

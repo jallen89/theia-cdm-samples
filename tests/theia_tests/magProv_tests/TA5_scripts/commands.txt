@@ -1,0 +1,119 @@
+ifconfig -a > ipinfo.txt
+sleep 100
+rm -rf ipinfo.txt
+sleep 30
+lsof > openfiles.txt
+sleep 150
+rdesktop -u steve 128.55.12.57
+sleep 60
+killall rdesktop
+firefox 128.55.12.167 &
+sleep 60
+firefox www.subway.com &
+sleep 30
+rdesktop -u steve 128.55.12.57
+killall rdesktop
+sleep 120
+netstat /ano
+sleep 20
+netstat /ano > stats.txt
+sleep 39
+rm stats.txt
+firefox www.google.com &
+sleep 90
+firefox 128.55.12.167 &
+sleep 90
+firefox www.cbs.com &
+sleep 120
+w
+w > currentuser.txt
+sleep 90
+rm currentuser.txt
+sleep 35
+firefox www.pandora.com &
+sleep 180
+nmap -Pn 128.55.12.57 > state.txt
+sleep 90
+rm state.txt
+sleep 60
+firefox  www.youtube.com &
+sleep 30
+killall firefox
+firefox www.geico &
+sleep 30
+firefox www.hzds.sk &
+firefox www.ebay.ca &
+sleep 60
+firefox www.yellowbridge.com &
+killall firefox
+find -iname "activity_gen"
+find ~ -empty
+sleep 212
+sort -r examples.desktop
+diff -w examples.desktop examples.desktop.orig
+sleep 90
+ls -ltr
+ls -F
+sleep 120
+rdesktop -u steve 128.55.12.57
+sleep 60
+killall rdesktop
+sleep 10
+rdesktop -u steve 128.55.12.57
+sleep 100
+killall rdesktop
+sleep 120
+gzip examples.desktop
+sleep 120
+gzip -d examples.desktop.gz
+sleep 45
+service ssh status
+service --status-all
+sleep 20
+firefox www.ny.gov
+service --status-all > services.txt
+sleep 90
+netstat -an > stats.txt
+sleep 120
+rm stats.txt
+firefox www.jetblue.com & 
+free -t > free.txt
+sleep 90
+rdesktop -u steve 128.55.12.57
+sleep 200
+killall rdesktop
+sleep 60
+firefox 128.55.12.167 & 
+sleep 120
+killall firefox
+rm free.txt
+sleep 90
+df -k
+df -k > df_out.txt
+sleep 100
+rdesktop -u steve 128.55.12.57
+sleep 90
+killall rdesktop
+sleep 120
+dig -x 200.200.200.1 > revlook.txt
+sleep 60
+rm revlook.txt
+sleep 10
+firefox www.homedepot.com &
+uname -a > info.txt
+uname -r > info.txt
+sleep 100
+rm info.txt
+cat /proc/meminfo > recon.txt
+sleep 30
+gzip recon.txt
+sleep 15
+gunzip recon.txt.gz
+sleep 10
+rm recon.txt
+sleep 120
+mv df_out.txt df.txt.orig
+sleep 60
+rm -r df_out.txt
+rm df.txt.orig
+./activity_gen.sh 

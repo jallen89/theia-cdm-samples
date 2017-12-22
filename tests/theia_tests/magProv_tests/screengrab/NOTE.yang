@@ -1,0 +1,7 @@
+98308 replayable trace
+
+This attack captures screenshots at a period of 5s, if evince is activated, screen shot is taken.
+Then another program will select part of captured pictures and send to 127.0.0.1:5001.
+1. ./implant-1
+2. open evince; close it
+3. ./implant-send 
