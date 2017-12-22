@@ -1,3 +1,6 @@
+Theia CDM18 Mapping
+====================
+
 Principal
 ----------
 
@@ -136,6 +139,10 @@ TimeMarker
 ----------
 * Not available
 * Currently, THEIA generates all events in order such that TimeMarker would be not needed.
+
+
+Events
+------
 
 
 * THEIA is an event (syscall)-based system such that it may not be able to provide detailed information of certain subjects and objects when they were created before THEIA starts to monitor the system execution.
