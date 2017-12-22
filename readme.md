@@ -46,7 +46,7 @@ Info           | Provided
 ---------------|----------
 uuid           | V
 hostId         | V
-properties     | inode, minor, major, generation, path, version (will be provided)
+properties     | X
 type           | FILE_OBJECT_FILE
 epoch          | X
 permission     | X
@@ -115,7 +115,22 @@ tagIds         | an array of tag uuids
 
 ProvenanceTagNode
 ----------
-* Not available
+
+parameters     | value
+---------------|----------
+tagId          | uuid
+flowObject     | uuid
+hostId         | uuid
+subject        | uuid
+systemCall     | syscall name
+programPoint   |  X
+prevTagId      |  X
+opcode         | opcode
+tagIds         | uuids
+itag           |  X
+ctag           |  X
+properties     |  X
+
 
 UnnamedPipeObject
 ----------
@@ -156,8 +171,8 @@ mmap       | MMAP             | memory, file         |          | length        
 munmap     | OTHER            | memory               |          | length        |                                    
 mprotect   | MPROTECT         | memory               |          |               | address, length, protection        
 open       | OPEN             | file                 |          |               |                                    
-read       | READ             | file                 | offset   | bytesRead     |                                    
-write      | WRITE            | file                 | offset   | bytesWritten  |                                    
+read       | READ             | file or netflow      | offset   | bytesRead     |                                    
+write      | WRITE            | file or netflow      | offset   | bytesWritten  |                                    
 pipe       | CREATE_OBJECT    | file1, file2 (bug)   |          |               |                                    
 accept     | ACCEPT           | netflow              |          |               | return_value                       
 connect    | CONNECT          | netflow              |          |               | return_value                       
