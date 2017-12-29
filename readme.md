@@ -46,12 +46,12 @@ Info           | Provided
 ---------------|----------
 uuid           | V
 hostId         | V
-properties     | X
+properties     | filename, dev, inode
 type           | FILE_OBJECT_FILE
 epoch          | X
 permission     | X
 fileDescriptor | X
-localPrincipal | X
+localPrincipal | V
 size           | X
 peInfo         | X
 hashes         | X
@@ -164,7 +164,7 @@ Events
 
 syscall    | Event type       | Predicate Objs       | location | size          | Properties                         
 -----------|------------------|----------------------|----------|---------------|------------------------------------                            
-clone      | CLONE            | child process        |          |               |                                    
+clone      | CLONE            | process, file        |          |               |                                    
 execve     | EXECUTE          | process, file        |          |               |                                    
 setuid     | CHANGE_PRINCIPAL | principal            |          |               | newuid, rc                         
 mmap       | MMAP             | memory, file         |          | length        |                                    
@@ -188,6 +188,6 @@ shmat      | SHM              | file,memory          |          |               
 shmget     | SHM              | file                 |          | size          | key, size, shmflg, shmid           
 Note
 --------
-* We provide *uuid*, *type*, *threadId*, *subject*, *timestamp*, and *name* (syscall) of events.
+* We provide *uuid*, *type*, *threadId*, *sequenceId*, *subject*, *timestamp*, and *name* (syscall) of events.
 * We do not provide  *predicateObjectPath*, *predicateObject2Path*, *parameters*, and *programPoint*.
-* Currently, **pipe** has a bug. We will fix it to provide the information of both ends.
+
