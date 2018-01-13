@@ -176,12 +176,12 @@ write      | WRITE            | file or netflow      | offset   | bytesWritten  
 pipe       | CREATE_OBJECT    | file1, file2 (bug)   |          |               |                                    
 accept     | ACCEPT           | netflow              |          |               | return_value                       
 connect    | CONNECT          | netflow              |          |               | return_value                       
-send       | SENDTO           | netflow              |          | bytesSent     |                                    
-sendto     | SENDTO           | netflow              |          | bytesSent     |                                    
-sendmsg    | SENDMSG          | netflow              |          | bytesSent     |                                    
-recv       | RECVFROM         | netflow              |          | bytesReceived |                                    
-recvfrom   | RECVFROM         | netflow              |          | bytesReceived |                                    
-recvmsg    | RECVMSG          | netflow              |          | bytesReceived |                                    
+send       | SENDTO           | netflow              |          |               |                                    
+sendto     | SENDTO           | netflow              |          |               |                                    
+sendmsg    | SENDMSG          | netflow              |          |               |                                    
+recv       | RECVFROM         | netflow              |          |               |                                    
+recvfrom   | RECVFROM         | netflow              |          |               |                                    
+recvmsg    | RECVMSG          | netflow              |          |               |                                    
 ioctl      | FCNTL            | file                 | command  |               |                                    
 mount      | MOUNT            |                      |          |               | devname, dirname, type, flags, rc  
 shmat      | SHM              | file,memory          |          |               | shmid, shmaddr, shmflg, rc, raddr  
