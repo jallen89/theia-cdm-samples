@@ -1,7 +1,6 @@
 `trace.json` provides a sample of Theia's CDM18. We leverage the same test cases as CADETS to provide a comparison 
 <https://github.com/cadets/trace-data/tree/master/ripe_unit_tests>.
 
- 
 The subject UUIDs for each test case are below:
 
 | Test Cases 
