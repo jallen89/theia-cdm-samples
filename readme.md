@@ -28,7 +28,7 @@ cid            | V
 parentSubject  | V
 localPrincipal | V
 startTimeStamp | V
-cmdLine        | executable path (arguments are not available for now)
+cmdLine        | X
 unitId         | X
 iteration      | X
 count          | X
@@ -164,8 +164,8 @@ Events
 
 syscall    | Event type       | Predicate Objs       | location | size          | Properties                         
 -----------|------------------|----------------------|----------|---------------|------------------------------------                            
-clone      | CLONE            | process, file        |          |               |                                    
-execve     | EXECUTE          | process, file        |          |               |                                    
+clone      | CLONE            | child process        |          |               |                                    
+execve     | EXECUTE          | file                 |          |               | cmdLine
 setuid     | CHANGE_PRINCIPAL | principal            |          |               | newuid, rc                         
 mmap       | MMAP             | memory, file         |          | length        |                                    
 munmap     | OTHER            | memory               |          | length        |                                    
@@ -185,7 +185,7 @@ recvmsg    | RECVMSG          | netflow              |          | bytesReceived 
 ioctl      | FCNTL            | file                 | command  |               |                                    
 mount      | MOUNT            |                      |          |               | devname, dirname, type, flags, rc  
 shmat      | SHM              | file,memory          |          |               | shmid, shmaddr, shmflg, rc, raddr  
-shmget     | SHM              | file                 |          | size          | key, size, shmflg, shmid           
+
 Note
 --------
 * We provide *uuid*, *type*, *threadId*, *sequenceId*, *subject*, *timestamp*, and *name* (syscall) of events.
