@@ -22,7 +22,7 @@ Info           | Provided
 ---------------|----------
 uuid           | V
 hostId         | V
-properties     | filepath, ppid
+properties     | ppid
 type           | PROCESS
 cid            | V
 parentSubject  | V
