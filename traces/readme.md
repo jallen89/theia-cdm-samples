@@ -1,13 +1,13 @@
 `trace.json` provides a sample of Theia's CDM18. We leverage the same test cases as CADETS to provide a comparison 
 <https://github.com/cadets/trace-data/tree/master/ripe_unit_tests>.
 
-###CDM Status
+### CDM Status
 
 ![alt text](./cdm_tests.png)
 
 
 
-The subject UUIDs for each test case are below:
+The cmdline for each unit test is below:
 
 | Test Cases 
 | --- |
