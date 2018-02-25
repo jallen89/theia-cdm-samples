@@ -7,5 +7,5 @@
 The data includes the following:
     
 * The user searches for Donald Trump and goes to his twitter page.
-* The user navigates to www.donaldtrump.com, and then watches a campaign video.  
+* The user navigates to www.donaldtrump.com and then watches a campaign video.  
 * The user goes to www.barackobama.com and watches another video.
