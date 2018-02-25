@@ -28,7 +28,7 @@ cid            | V
 parentSubject  | V
 localPrincipal | V
 startTimeStamp | V
-cmdLine        | X
+cmdLine        | V
 unitId         | X
 iteration      | X
 count          | X
@@ -38,6 +38,12 @@ exportedLibs   | X
 
 * Note that Linux kernel does not clearly distinguish threads from processes.
 * THEIA reports the *pid* of a *task_struct* as cid, not tgid.
+* The cmdLine field provided in the subject record represents the cmdLine of when THEIA first
+sees a process. If a process executes a new file, we provide the updated cmdLine as a property
+in EVENT_EXECUTE events.
+
+The cmdLine property provided in the subject record represents the cmdLine of when THEIA first  
+sees a subject, 
 
 FileObject
 ----------
@@ -55,9 +61,6 @@ localPrincipal | V
 size           | X
 peInfo         | X
 hashes         | X
-
-* THEIA creates a new FileObject whenever a file has been updated (e.g., write syscall) for versioning.
-* It is better to use inode and/or path to link different versions of the same file.
 
 NetFlowObject
 ----------
@@ -162,32 +165,40 @@ Events
 
 * THEIA is an event (syscall)-based system such that it may not be able to provide detailed information of certain subjects and objects when they were created before THEIA starts to monitor the system execution.
 
-syscall    | Event type       | Predicate Objs       | location | size          | Properties                         
------------|------------------|----------------------|----------|---------------|------------------------------------                            
-clone      | CLONE            | child process        |          |               |                                    
-execve     | EXECUTE          | file                 |          |               | cmdLine
-setuid     | CHANGE_PRINCIPAL | principal            |          |               | newuid, rc                         
-mmap       | MMAP             | memory, file         |          | length        |                                    
-munmap     | OTHER            | memory               |          | length        |                                    
-mprotect   | MPROTECT         | memory               |          |               | address, length, protection        
-open       | OPEN             | file                 |          |               |                                    
-read       | READ             | file or netflow      | offset   | bytesRead     |                                    
-write      | WRITE            | file or netflow      | offset   | bytesWritten  |                                    
-pipe       | CREATE_OBJECT    | file1, file2 (bug)   |          |               |                                    
-accept     | ACCEPT           | netflow              |          |               | return_value                       
-connect    | CONNECT          | netflow              |          |               | return_value                       
-send       | SENDTO           | netflow              |          |               |                                    
-sendto     | SENDTO           | netflow              |          |               |                                    
-sendmsg    | SENDMSG          | netflow              |          |               |                                    
-recv       | RECVFROM         | netflow              |          |               |                                    
-recvfrom   | RECVFROM         | netflow              |          |               |                                    
-recvmsg    | RECVMSG          | netflow              |          |               |                                    
-ioctl      | FCNTL            | file                 | command  |               |                                    
-mount      | MOUNT            |                      |          |               | devname, dirname, type, flags, rc  
-shmat      | SHM              | file,memory          |          |               | shmid, shmaddr, shmflg, rc, raddr  
+syscall    | Event type                | Predicate Objs       | location | size          | Properties                         
+-----------|---------------------------|----------------------|----------|---------------|------------------------------------                            
+clone      | CLONE                     | child process        |          |               |                                 
+execve     | EXECUTE                   | file                 |          |               | cmdLine
+setuid     | CHANGE_PRINCIPAL          | principal            |          |               | newuid, rc                         
+mmap       | MMAP                      | memory, file         |          | length        |                                    
+munmap     | OTHER                     | memory               |          | length        |                                    
+mprotect   | MPROTECT                  | memory               |          |               | address, length, protection        
+open       | OPEN                      | file                 |          |               |                                    
+read       | READ                      | file or netflow      | offset   | bytesRead     |                                    
+write      | WRITE                     | file or netflow      | offset   | bytesWritten  |                                    
+pipe       | CREATE_OBJECT             | file1,               |          |               |                                    
+accept     | ACCEPT                    | netflow              |          |               | return_value                       
+connect    | CONNECT                   | netflow              |          |               | return_value                       
+send       | SENDTO                    | netflow              |          |               |                                    
+sendto     | SENDTO                    | netflow              |          |               |                                    
+sendmsg    | SENDMSG                   | netflow              |          |               |                                    
+recv       | RECVFROM                  | netflow              |          |               |                                    
+recvfrom   | RECVFROM                  | netflow              |          |               |                                    
+recvmsg    | RECVMSG                   | netflow              |          |               |                                    
+ioctl      | FCNTL                     | file                 | command  |               |                                    
+mount      | MOUNT                     |                      |          |               |  devname, dirname, type, flags, rc  
+shmat      | SHM                       | file,memory          |          |               |  shmid, shmaddr, shmflg, rc, raddr  
+chown      |  MODIFY_FILE_ATTRIBUTES   | file, principial     |          |               |  uid, gid
+fchown     |  MODIFY_FILE_ATTRIBUTES   | file, principial     |          |               |  uid, gid
+fchownat   |  MODIFY_FILE_ATTRIBUTES   | file, principial     |          |               |  uid, gid
+lchown     |  MODIFY_FILE_ATTRIBUTES   | file, principial     |          |               |  uid, gid
+chmod      |  MODIFY_FILE_ATTRIBUTES   | file                 |          |               |  mode
+fchmod     |  MODIFY_FILE_ATTRIBUTES   | file                 |          |               |  mode
+fchmodat   |  MODIFY_FILE_ATTRIBUTES   | file                 |          |               |  mode
 
 Note
 --------
 * We provide *uuid*, *type*, *threadId*, *sequenceId*, *subject*, *timestamp*, and *name* (syscall) of events.
 * We do not provide  *predicateObjectPath*, *predicateObject2Path*, *parameters*, and *programPoint*.
+** 
 
