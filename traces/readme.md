@@ -1,25 +1,10 @@
-`trace.json` provides a sample of Theia's CDM18. We leverage the same test cases as CADETS to provide a comparison 
-<https://github.com/cadets/trace-data/tree/master/ripe_unit_tests>.
-
 ### CDM Status
 
-![alt text](./cdm_tests.png)
+### firefox examples (2/25/2018)
 
+`firefox.avsc.gz` and `firefox.json.gz` provide new samples of Theia's CDM18 data. 
 
+The data includes the following:
 
-The cmdline for each unit test is below:
-
-| Test Cases 
-| --- |
-listdir |
-change\_file\_permissions |
-| copy\_file |
-| remove\_file |
-| copy\_static\_buf |
-| copy\_static\_buf\_string | 
-| copy\_static\_heap\_buf |
-| copy\_static\_buf\_stack\_frame |
-| download\_with\_wget |
-| fork\_process |
-| make\_directory |
-| remove\_directory |||
+    * The user opens a brower and navigates to www.donaldtrump.com, and then watches a campaign video.  
+    * The user then navigates to www.barackobama.com and watches another video.
