@@ -42,8 +42,7 @@ exportedLibs   | X
 sees a process. If a process executes a new file, we provide the updated cmdLine as a property
 in EVENT_EXECUTE events.
 
-The cmdLine property provided in the subject record represents the cmdLine of when THEIA first  
-sees a subject, 
+
 
 FileObject
 ----------
