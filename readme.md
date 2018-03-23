@@ -35,12 +35,11 @@ count          | X
 privilegeLevel | X
 importedLibs   | X
 exportedLibs   | X
+properties     | path - The full path to the file being executed.
 
 * Note that Linux kernel does not clearly distinguish threads from processes.
 * THEIA reports the *pid* of a *task_struct* as cid, not tgid.
-* The cmdLine field provided in the subject record represents the cmdLine of when THEIA first
-sees a process. If a process executes a new file, we provide the updated cmdLine as a property
-in EVENT_EXECUTE events.
+* Theia creates new subject records when a clone system call occurs. From the perspective of the kernel, the new subject will have the cmdLine of its parent. The new process will then possibly run an exec family system call which replaces the parent process's image with the new image, which in turns changes the cmdLine.  In many cases, the new child process will not run an exec syscall and the cmdLine found in the subject record will be accurate. However, if it does uses an exec system call, then TA2 teams should use the cmdLine property provided in an EVENT_EXECUTE record
 
 
 
