@@ -13,7 +13,7 @@ Topic Name               | Start timestamp | End timestamp | Start Time         
 ta1-theia-e3-official    | 1522704214      | 1522763431    | Monday, April 2, 2018 5:23:34 PM EST    | Monday, April 2, 2018 9:04:53 PM EST   | 
 ta1-theia-e3-official-1* | 1522764134      | 1522776213    | Tuesday, April 3, 2018 10:02:14 AM EST  | Tuesday, April 3, 2018 1:23:33 PM EST  |
 ta1-theia-e3-official-1r*| 1522764134      | 1522941541    | Tuesday, April 3, 2018 10:02:14 AM EST  | Thursday, April 5, 2018 11:19:01 AM EST|
-ta1-theia-e3-official-4  | 1522964107      | 1522976758    | Thursday, April 5, 2018 5:35:07 PM EST  | Thursday, April 5, 2018 9:05:58 PM |
+ta1-theia-e3-official-4  | 1522964107      | 1522976758    | Thursday, April 5, 2018 5:35:07 PM EST  | Thursday, April 5, 2018 9:05:58 PM EST |
 ta1-theia-e3-official-5  | 1523086732      | 1523086732    | Friday, April 6, 2018 9:59:31 AM EST    | Saturday, April 7, 2018 3:38:56 AM EST |  
 
 \* ta1-theia-e3-official-1 is a subset of ta1-theia-e3-official-1r. TA2 teams should use ta1-theia-e3-official-1r for analysis.
