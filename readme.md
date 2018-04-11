@@ -63,12 +63,11 @@ count          | X
 privilegeLevel | X
 importedLibs   | X
 exportedLibs   | X
+properties     | path - The full path to the file being executed.
 
 * Note that Linux kernel does not clearly distinguish threads from processes.
 * THEIA reports the *pid* of a *task_struct* as cid, not tgid.
-* The cmdLine field provided in the subject record represents the cmdLine of when THEIA first
-sees a process. If a process executes a new file, we provide the updated cmdLine as a property
-in EVENT_EXECUTE events.
+* Theia creates new subject records when a clone system call occurs. From the perspective of the kernel, the new subject will have the cmdLine of its parent. The new process will then possibly run an exec family system call which replaces the parent process's image with the new image, which in turns changes the cmdLine.  In many cases, the new child process will not run an exec syscall and the cmdLine found in the subject record will be accurate. However, if it does uses an exec system call, then TA2 teams should use the cmdLine property provided in an EVENT_EXECUTE record
 
 
 
@@ -104,6 +103,23 @@ epoch          | X
 properties     | X
 ipProtocol     | X
 fileDescriptor | X
+
+* Basically, THEIA's NetFlowObject is created by partially extracting (important) information from struct sockaddr (http://www.retran.com/beej/sockaddr_inman.html).
+* Every information was collected as a best-effort manner. Sometimes kernel does not return complete information because of its lazy data allocation.
+* Remote connection (Internet connection)
+  * Established connection: All localAddress, localPort, remoteAddress, remotePort are filled with values.
+  * Non-established connection (a socket has been created and bound to a pair of IP and port, but not yet connected to a remote client or server): localAddress and localPort have values, but remoteAddress and remotePort do not.
+    * localAddress == 0.0.0.0 would mean no address has been assigned to this socket yet (https://tools.ietf.org/html/rfc1700)
+* Local connection (UNIX domain socket or local Internet connection)
+  * UNIX domain socket: localAddress is filled with either LOCAL or a file path (e.g., /tmp/.X11-unix/X0).
+    * LOCAL would mean no file path has been assigned to the domain socket yet.
+  * Local Internet connection: Both localAddress and remoteAddress are 127.0.0.1. This means that two processes use Internet connection for inter-process communication.
+* Netlink connection (a communication mechanism between a user process and kernel)
+  * localAddress is filled with NETLINK and localPort is filled with the process ID of a user process (if it is not 0).
+* Errors ("NA") mean that THEIA has failed to retrieve information. Possible reasons include
+  * Not-yet supported socket type: raw socket, IPv6 socket, ...
+  * No corresponding information (e.g., domain sockets do not need to have remote info).
+  * A newly created socket without any address assignment.
 
 MemoryObject
 ----------
