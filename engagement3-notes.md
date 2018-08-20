@@ -1,66 +1,34 @@
-Theia CDM~~18~~19 Documentation
+Theia CDM18 Mapping
 ====================
 
-CDMv19 Updates
+Engagement 3 Topics
 ---------
-* __CDM Session Streams__: 
-    * _session stream ID_: A monotonically increasing session ID will be added to every `TCCDM_DATUM` record. 
-    A new session will begin at every `HOST_RECORD`, and a session will end when a `HOST_RECORD` with a 
-    new session number occurs. In almost all cases, a new session will begin when Theia's target system 
-    is rebooted. 
-
-  * _Sessions and UUID Uniqueness_: __A UUID can appear in multiple sessions, and if this is the case,
-    it means Theia is providing a version of this object based on its state in
-    the current session. If a topic contains two records with the same UUID, it means these two records
-    represent the same object, but from different sessions__. Records with larger sequence stream IDs 
-    obviously represent a more recent description of the object's state. For example, if a file's permissions 
-    have been modified, the file record with the highest session number will represent the most-current state of 
-    this record. 
-
-  *  _per-session def-use provenance data_ : Theia will define all records in a
-     session before they are used, which is necessary for intra-session
-     analysis. Aditionally, for _inter-session analysis_, the provenance graph
-     will have all nodes defined before they are used. 
-
-* __Kafka Topics__: 
-    * _inter-host multi-session Kafka topics_: Each unique host will have a unique kafka topic. 
-    All sessions from the same host will be posted to the same topic. If two records 
-    with the same UUID are found in the same topic, it means Theia observed this record was used 
-    in  two unique sessions, and Theia is providing an updated record that provides a snapshot 
-    of the records state during its _first_  use in a session.
 
 
-* __Standarization__: 
-    * _Partially Constructed Records_: In some cases, the Linux kernel does not
-      provide Theia with every possible field in a CDM record. This is due to the 
-      kernel relying on lazy data allocation for performance reasons. In this
-      situation, we designed Theia to fallback on _partial record construction_, which
-      allows Theia to report the meaningful fields that are actually
-      extractable.  For engagement 4, all meaningful fields extracted will have
-      the appropriate values, while any remaining fields will maintain the
-      standard default value. This will allow TA2 teams to focus on the most meaingingful
-      fields in a record, and avoiding unnecessary parsing exceptions.
-    
-*  __Netflow Record__: 
+#### Week 1
 
-    * _Addresses and Ports_: localAddress and remoteAddress fields will no longer contain 
-    "NA" values. Instead, when Theia uses partial event reconstruction, the default standardized None 
-    value will be used. This allows us to still provide meanginful information,
-    without adding unique values into the CDM. Additionally, netflow records' _localPort_ and _remotePort_ fields 
-    will be set to their respective default values when the localAddress or remoteAddress values were not provided
-    by the kernel 
-    respectively (Issue 115).
 
-    * _Unix Domain Sockets_: Netflow Records will no longer be used to model
-      Unix Domain sockets, which are used for intra-host inter-process
-      communication. Instead, the new IPCObject Record type (Issue 112) will be
-      used instead. Please see `Unix Domain Sockets` section below. 
+Topic Name               | Start timestamp | End timestamp | Start Time                              | End Time                               |
+-------------------------|-----------------|---------------|-----------------------------------------|--------------------------------------  |
+ta1-theia-e3-official    | 1522704214      | 1522763431    | Monday, April 2, 2018 5:23:34 PM EST    | Monday, April 2, 2018 9:04:53 PM EST   | 
+ta1-theia-e3-official-1* | 1522764134      | 1522776213    | Tuesday, April 3, 2018 10:02:14 AM EST  | Tuesday, April 3, 2018 1:23:33 PM EST  |
+ta1-theia-e3-official-1r*| 1522764134      | 1522941541    | Tuesday, April 3, 2018 10:02:14 AM EST  | Thursday, April 5, 2018 11:19:01 AM EST|
+ta1-theia-e3-official-4  | 1522964107      | 1522976758    | Thursday, April 5, 2018 5:35:07 PM EST  | Thursday, April 5, 2018 9:05:58 PM EST |
+ta1-theia-e3-official-5  | 1523086732      | 1523086732    | Friday, April 6, 2018 9:59:31 AM EST    | Saturday, April 7, 2018 3:38:56 AM EST |  
 
- * __Misc__: 
-    * `TCCDM_DATUM` records will now explicitly state the record's type.
+\* ta1-theia-e3-official-1 is a subset of ta1-theia-e3-official-1r. TA2 teams should use ta1-theia-e3-official-1r for analysis.
 
-     
-     
+#### Week 2
+
+Topic Name               | Start timestamp | End timestamp | Start Time                              | End Time                               |
+-------------------------|-----------------|---------------|-----------------------------------------|--------------------------------------  |
+ta1-theia-e3-official-5m | 1523277850      | 1523312112    | Monday, April 9, 2018 8:44:10 AM EST    | Monday, April 9, 2018 6:15:12 PM EST   |
+ta1-theia-e3-official-6r | 1523378673      | Present       | Tuesday, April 10, 2018 12:44:33 AM EST | Present                                |
+
+* ___All other topics should not be used for analysis.___
+* ___UUIDS are not unique across topics.___
+
+
 Principal
 ----------
 
@@ -148,7 +116,7 @@ fileDescriptor | X
   * Local Internet connection: Both localAddress and remoteAddress are 127.0.0.1. This means that two processes use Internet connection for inter-process communication.
 * Netlink connection (a communication mechanism between a user process and kernel)
   * localAddress is filled with NETLINK and localPort is filled with the process ID of a user process (if it is not 0).
-* Errors (Default Values) mean that THEIA has failed to retrieve information. Possible reasons include
+* Errors ("NA") mean that THEIA has failed to retrieve information. Possible reasons include
   * Not-yet supported socket type: raw socket, IPv6 socket, ...
   * No corresponding information (e.g., domain sockets do not need to have remote info).
   * A newly created socket without any address assignment.
