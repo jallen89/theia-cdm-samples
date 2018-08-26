@@ -17,6 +17,12 @@ CDMv19 Updates
     have been modified, the file record with the highest session number will represent the most-current state of 
     this record. 
 
+    uuid | filename | session 
+    -----|----------| ---------
+    0100d00f-3d07-4600-0000-00003f56565b | /home/joey/ripe-prov-tests/Linux/bash_commands.sh | 0
+    0100d00f-3d07-4600-0000-00003f56565b | /home/joey/ripe-prov-tests/Linux/bash_commands.sh | 1
+
+
   *  _per-session def-use provenance data_ : Theia will define all records in a
      session before they are used, which is necessary for intra-session
      analysis. Aditionally, for _inter-session analysis_, the provenance graph
