@@ -257,7 +257,7 @@ mprotect   | MPROTECT                  | memory               |          |      
 open       | OPEN                      | file                 |          |               |                                    
 read       | READ                      | file or netflow      | offset   | bytesRead     |                                    
 write      | WRITE                     | file or netflow      | offset   | bytesWritten  |                                    
-pipe       | CREATE_OBJECT             | file1,               |          |               |                                    
+pipe       | CREATE_OBJECT             | pipe object          |          |               |                                    
 accept     | ACCEPT                    | netflow              |          |               | return_value                       
 connect    | CONNECT                   | netflow              |          |               | return_value                       
 send       | SENDTO                    | netflow              |          |               |                                    
