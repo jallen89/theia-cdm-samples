@@ -57,7 +57,7 @@ CDMv19 Updates
     by the kernel 
     respectively (Issue 115).
 
-    * _Unix Domain Sockets_: Netflow Records will no longer be used to model
+    * _Unix Domain Sockets_ (in progress): Netflow Records will no longer be used to model
       Unix Domain sockets, which are used for intra-host inter-process
       communication. Instead, the new IPCObject Record type (Issue 112) will be
       used instead. Please see `Unix Domain Sockets` section below. 
