@@ -29,7 +29,7 @@ CDMv19 Updates
      will have all nodes defined before they are used. 
 
 * __Kafka Topics__: 
-    * _inter-host multi-session Kafka topics_: Each unique host will have a unique kafka topic. 
+    * _single-host multi-session Kafka topics_: Each unique host will have a unique kafka topic. 
     All sessions from the same host will be posted to the same topic. If two records 
     with the same UUID are found in the same topic, it means Theia observed this record was used 
     in  two unique sessions, and Theia is providing an updated record that provides a snapshot 
@@ -61,6 +61,20 @@ CDMv19 Updates
       Unix Domain sockets, which are used for intra-host inter-process
       communication. Instead, the new IPCObject Record type (Issue 112) will be
       used instead. Please see `Unix Domain Sockets` section below. 
+
+* __File Record__:
+    * The `inode` and `device` value in the property map are represented by hex
+      strings (`Record['properties']['inode'] = "0x1234"`). 
+    * In rare cases, Theia reported negative inode and device identifiers during
+      engagement 3. This issue has been fixed. 
+
+* __Events__:
+    * During engagement 3, `EVENT_READ_SOCKET_PARAMS` and
+      `EVENT_WRITE_SOCKET_PARAMS` were used to model read and writes from
+      sockets respectively. For engagement 4, we will model read and writes from 
+      sockets using  `EVENT_READ` and `EVENT_WRITE` instead. When a read or
+      write event for a socket is reported, the event's `predicateObject1` field 
+      will be set to the netflow object's UUID.
 
  * __Misc__: 
     * `TCCDM_DATUM` records will now explicitly state the record's type.
