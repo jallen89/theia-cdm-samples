@@ -47,7 +47,7 @@ CDMv19 Updates
       standard default value. This will allow TA2 teams to focus on the most meaingingful
       fields in a record, and avoiding unnecessary parsing exceptions.
     
-*  __Netflow Record__: 
+* __Netflow Record__: 
 
     * _Addresses and Ports_: localAddress and remoteAddress fields will no longer contain 
     "NA" values. Instead, when Theia uses partial event reconstruction, the default standardized None 
@@ -67,6 +67,10 @@ CDMv19 Updates
       strings (`Record['properties']['inode'] = "0x1234"`). 
     * In rare cases, Theia reported negative inode and device identifiers during
       engagement 3. This issue has been fixed. 
+    * The ids (uid,gid) for a file are always reported in a file object's
+      property map. The format is `Record['properties']['ids'] = "<uid>/<gid"`. 
+      The ids represent the ids for a file based on their values when the file
+      was first logged by Theia.
 
 * __Events__:
     * During engagement 3, `EVENT_READ_SOCKET_PARAMS` and
@@ -130,8 +134,8 @@ Info           | Provided
 ---------------|----------
 uuid           | V
 hostId         | V
-properties     | filename, dev, inode
-type           | FILE_OBJECT_FILE
+properties     | filename, dev, inode, ids
+type           | FILE\_OBJECT\_FILE
 epoch          | X
 permission     | X
 fileDescriptor | X
