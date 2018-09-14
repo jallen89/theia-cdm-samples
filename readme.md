@@ -79,6 +79,7 @@ CDMv19 Updates
       sockets using  `EVENT_READ` and `EVENT_WRITE` instead. When a read or
       write event for a socket is reported, the event's `predicateObject1` field 
       will be set to the netflow object's UUID.
+    * Theia now provides support for `EVENT_EXIT` when a process exits.
 
  * __Misc__: 
     * `TCCDM_DATUM` records will now explicitly state the record's type.
@@ -92,11 +93,11 @@ Info           | Provided
 ---------------|----------
 uuid           | V
 hostId         | V
-type           | PRINCIPAL_LOCAL
+type           | PRINCIPAL\_LOCAL
 userId         | V
 username       | X
 groupIDs       | V
-properties     | cred (uid/euid/suid/fsuid/gid/egid/sgid/fsgid)
+properties     | uid, gid
 
 
 Subject
@@ -119,7 +120,7 @@ count          | X
 privilegeLevel | X
 importedLibs   | X
 exportedLibs   | X
-properties     | path - The full path to the file being executed.
+properties     | path, uid, euid, suid, fsuid, gid, egid, sgid, fsgid
 
 * Note that Linux kernel does not clearly distinguish threads from processes.
 * THEIA reports the *pid* of a *task_struct* as cid, not tgid.
@@ -134,7 +135,7 @@ Info           | Provided
 ---------------|----------
 uuid           | V
 hostId         | V
-properties     | filename, dev, inode, ids
+properties     | filename, dev, inode, uid, gid
 type           | FILE\_OBJECT\_FILE
 epoch          | X
 permission     | X
@@ -268,16 +269,16 @@ syscall    | Event type                | Predicate Objs       | location | size 
 -----------|---------------------------|----------------------|----------|---------------|------------------------------------                            
 clone      | CLONE                     | child process        |          |               |                                 
 execve     | EXECUTE                   | file                 |          |               | cmdLine
-setuid     | CHANGE_PRINCIPAL          | principal            |          |               | newuid, rc                         
+setuid     | CHANGE\_PRINCIPAL         | principal            |          |               | newuid, return value
 mmap       | MMAP                      | memory, file         |          | length        |                                    
 munmap     | OTHER                     | memory               |          | length        |                                    
 mprotect   | MPROTECT                  | memory               |          |               | address, length, protection        
 open       | OPEN                      | file                 |          |               |                                    
 read       | READ                      | file or netflow      | offset   | bytesRead     |                                    
 write      | WRITE                     | file or netflow      | offset   | bytesWritten  |                                    
-pipe       | CREATE_OBJECT             | pipe object          |          |               |                                    
-accept     | ACCEPT                    | netflow              |          |               | return_value                       
-connect    | CONNECT                   | netflow              |          |               | return_value                       
+pipe       | CREATE\_OBJECT            | pipe object          |          |               |                                    
+accept     | ACCEPT                    | netflow              |          |               | return value                       
+connect    | CONNECT                   | netflow              |          |               | return value                       
 send       | SENDTO                    | netflow              |          |               |                                    
 sendto     | SENDTO                    | netflow              |          |               |                                    
 sendmsg    | SENDMSG                   | netflow              |          |               |                                    
@@ -287,13 +288,14 @@ recvmsg    | RECVMSG                   | netflow              |          |      
 ioctl      | FCNTL                     | file                 | command  |               |                                    
 mount      | MOUNT                     |                      |          |               |  devname, dirname, type, flags, rc  
 shmat      | SHM                       | file,memory          |          |               |  shmid, shmaddr, shmflg, rc, raddr  
-chown      |  MODIFY_FILE_ATTRIBUTES   | file, principial     |          |               |  uid, gid
-fchown     |  MODIFY_FILE_ATTRIBUTES   | file, principial     |          |               |  uid, gid
-fchownat   |  MODIFY_FILE_ATTRIBUTES   | file, principial     |          |               |  uid, gid
-lchown     |  MODIFY_FILE_ATTRIBUTES   | file, principial     |          |               |  uid, gid
-chmod      |  MODIFY_FILE_ATTRIBUTES   | file                 |          |               |  mode
-fchmod     |  MODIFY_FILE_ATTRIBUTES   | file                 |          |               |  mode
-fchmodat   |  MODIFY_FILE_ATTRIBUTES   | file                 |          |               |  mode
+chown      | MODIFY\_FILE\_ATTRIBUTES  | file, principial     |          |               |  uid, gid
+fchown     | MODIFY\_FILE\_ATTRIBUTES  | file, principial     |          |               |  uid, gid
+fchownat   | MODIFY\_FILE\_ATTRIBUTES  | file, principial     |          |               |  uid, gid
+lchown     | MODIFY\_FILE\_ATTRIBUTES  | file, principial     |          |               |  uid, gid
+chmod      | MODIFY\_FILE\_ATTRIBUTES  | file                 |          |               |  mode
+fchmod     | MODIFY\_FILE\_ATTRIBUTES  | file                 |          |               |  mode
+fchmodat   | MODIFY\_FILE\_ATTRIBUTES  | file                 |          |               |  mode
+exit       | EVENT\_EXIT               |  X                   |          |               |
 
 Note
 --------
