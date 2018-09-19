@@ -72,13 +72,25 @@ CDMv19 Updates
       The ids represent the ids for a file based on their values when the file
       was first logged by Theia.
 
+* __Memory Record__:
+    * The flags used during a `mmap` syscall will be provided in the
+      property map in human-readable form ` "flags":
+      "MAP_PRIVATE|MAP_ANONYMOUS|MAP_GROWSDOWN"`.
+    * The protection properties of a memory object will now be provided in the
+      property map in human-readable form: `"prot": "PROT_READ|PROT_EXEC"`.
+
 * __Events__:
     * During engagement 3, `EVENT_READ_SOCKET_PARAMS` and
       `EVENT_WRITE_SOCKET_PARAMS` were used to model read and writes from
       sockets respectively. For engagement 4, we will model read and writes from 
       sockets using  `EVENT_READ` and `EVENT_WRITE` instead. When a read or
       write event for a socket is reported, the event's `predicateObject1` field 
-      will be set to the netflow object's UUID.
+      will be set to the netflow object or IPC object's  UUID.
+    * `EVENT_OPEN` will now provide the flags arguments in human-readable form
+      in the property map `flags ":"O_WRONLY|O_CREAT|O_TRUNC"`.
+    * New Events Supported: `EVENT_CORRELATE`, `EVENT_EXIT`
+
+
 
  * __Misc__: 
     * `TCCDM_DATUM` records will now explicitly state the record's type.
@@ -91,12 +103,10 @@ Principal
 Info           | Provided
 ---------------|----------
 uuid           | V
-hostId         | V
-type           | PRINCIPAL_LOCAL
+type           | PRINCIPAL\_LOCAL
 userId         | V
-username       | X
 groupIDs       | V
-properties     | cred (uid/euid/suid/fsuid/gid/egid/sgid/fsgid)
+properties     | uid, gid
 
 
 Subject
@@ -105,25 +115,22 @@ Subject
 Info           | Provided
 ---------------|----------
 uuid           | V
-hostId         | V
-properties     | ppid
 type           | PROCESS
 cid            | V
 parentSubject  | V
 localPrincipal | V
 startTimeStamp | V
 cmdLine        | V
-unitId         | X
-iteration      | X
-count          | X
-privilegeLevel | X
-importedLibs   | X
-exportedLibs   | X
-properties     | path - The full path to the file being executed.
+properties     | path, uid, euid, suid, fsuid, gid, egid, sgid, fsgid, ppid
 
 * Note that Linux kernel does not clearly distinguish threads from processes.
 * THEIA reports the *pid* of a *task_struct* as cid, not tgid.
-* Theia creates new subject records when a clone system call occurs. From the perspective of the kernel, the new subject will have the cmdLine of its parent. The new process will then possibly run an exec family system call which replaces the parent process's image with the new image, which in turns changes the cmdLine.  In many cases, the new child process will not run an exec syscall and the cmdLine found in the subject record will be accurate. However, if it does uses an exec system call, then TA2 teams should use the cmdLine property provided in an EVENT_EXECUTE record
+* Theia creates new subject records when a clone system call occurs. From the perspective of the kernel, 
+the new subject will have the cmdLine of its parent. The new process will then possibly run an exec 
+family system call which replaces the parent process's image with the new image, which in turns changes 
+the cmdLine.  In many cases, the new child process will not run an exec syscall and the cmdLine found in 
+the subject record will be accurate. However, if it does uses an exec system call, then TA2 teams should 
+use the cmdLine property provided in an EVENT\_EXECUTE record
 
 
 
@@ -133,16 +140,12 @@ FileObject
 Info           | Provided
 ---------------|----------
 uuid           | V
-hostId         | V
-properties     | filename, dev, inode, ids
+properties     | filename, dev, inode, uid, gid
 type           | FILE\_OBJECT\_FILE
-epoch          | X
-permission     | X
-fileDescriptor | X
 localPrincipal | V
-size           | X
-peInfo         | X
-hashes         | X
+
+* inode and dev (device) are provided as hex strings.
+
 
 NetFlowObject
 ----------
@@ -150,15 +153,10 @@ NetFlowObject
 Info           | Provided
 ---------------|----------
 uuid           | V
-hostId         | V
 localAddress   | V 
 localPort      | V
 remoteAddress  | V
 remotePort     | V
-epoch          | X
-properties     | X
-ipProtocol     | X
-fileDescriptor | X
 
 * Basically, THEIA's NetFlowObject is created by partially extracting (important) information from struct sockaddr (http://www.retran.com/beej/sockaddr_inman.html).
 * Every information was collected as a best-effort manner. Sometimes kernel does not return complete information because of its lazy data allocation.
@@ -177,19 +175,46 @@ fileDescriptor | X
   * No corresponding information (e.g., domain sockets do not need to have remote info).
   * A newly created socket without any address assignment.
 
+
+IPCObject
+----------
+
+Info           | Provided
+---------------|----------
+uuid           | V
+type           | V
+properties     | type, path
+
+* __Unix Domain Sockets__: Theia uses the new IPC Record to model Unix domain sockets,
+which are used for communication between two processes on the same host, and they do not cross 
+the host boundary. Additionally, there are three flavors of domain sockets: _pathname_, _abstract_, 
+and _unnamed_. Theia models all three using the IPCRecord, and uses the _type_ field to specify the difference. 
+    * For domain sockets of type _pathname_, the socket is bound to a file,
+      and Theia provides the path of this file in the property map.
+    * _abstract_ domain sockets leverage a unique string for identification,
+      and Theia will provided this unique string in the _path_ field. 
+    * For _unnamed_ sockets, we do not provide the _path_ field, and it should
+      be ignored if this is the case. 
+* __Netlink Sockets__: Netlink sockets are used for communication between
+  the kernel and a user process. Theia uses IPCObjects to model communication
+  through netlink sockets. Unfortunately, NETLINK is not a type that provided
+  in by the `IPCRecordType` enum. To identify when a netlink socket is used, we
+  provide an additional key in the property map `type`, which will always be
+  set to NETLINK.
+
+
 MemoryObject
 ----------
 
 Info           | Provided
 ---------------|----------
 uuid           | V
-hostId         | V
 memoryAddress  | V
-properties     | X
-epoch          | X
+properties     | flags, prot
 size           | V
-pageNumber     | X
-pageOffset     | X
+
+* In some cases, Theia cannot report the flags or prot values. If this is the
+      case, the keys will not be placed in the property map.
 
 TheiaQuery
 ----------
@@ -222,7 +247,6 @@ parameters     | value
 ---------------|----------
 tagId          | uuid
 flowObject     | uuid
-hostId         | uuid
 subject        | uuid
 systemCall     | syscall name
 programPoint   |  X
@@ -261,39 +285,40 @@ TimeMarker
 Events
 ------
 
-
 * THEIA is an event (syscall)-based system such that it may not be able to provide detailed information of certain subjects and objects when they were created before THEIA starts to monitor the system execution.
 
-syscall    | Event type                | Predicate Objs       | location | size          | Properties                         
------------|---------------------------|----------------------|----------|---------------|------------------------------------                            
-clone      | CLONE                     | child process        |          |               |                                 
-execve     | EXECUTE                   | file                 |          |               | cmdLine
-setuid     | CHANGE_PRINCIPAL          | principal            |          |               | newuid, rc                         
-mmap       | MMAP                      | memory, file         |          | length        |                                    
-munmap     | OTHER                     | memory               |          | length        |                                    
-mprotect   | MPROTECT                  | memory               |          |               | address, length, protection        
-open       | OPEN                      | file                 |          |               |                                    
-read       | READ                      | file or netflow      | offset   | bytesRead     |                                    
-write      | WRITE                     | file or netflow      | offset   | bytesWritten  |                                    
-pipe       | CREATE_OBJECT             | pipe object          |          |               |                                    
-accept     | ACCEPT                    | netflow              |          |               | return_value                       
-connect    | CONNECT                   | netflow              |          |               | return_value                       
-send       | SENDTO                    | netflow              |          |               |                                    
-sendto     | SENDTO                    | netflow              |          |               |                                    
-sendmsg    | SENDMSG                   | netflow              |          |               |                                    
-recv       | RECVFROM                  | netflow              |          |               |                                    
-recvfrom   | RECVFROM                  | netflow              |          |               |                                    
-recvmsg    | RECVMSG                   | netflow              |          |               |                                    
-ioctl      | FCNTL                     | file                 | command  |               |                                    
-mount      | MOUNT                     |                      |          |               |  devname, dirname, type, flags, rc  
-shmat      | SHM                       | file,memory          |          |               |  shmid, shmaddr, shmflg, rc, raddr  
-chown      |  MODIFY_FILE_ATTRIBUTES   | file, principial     |          |               |  uid, gid
-fchown     |  MODIFY_FILE_ATTRIBUTES   | file, principial     |          |               |  uid, gid
-fchownat   |  MODIFY_FILE_ATTRIBUTES   | file, principial     |          |               |  uid, gid
-lchown     |  MODIFY_FILE_ATTRIBUTES   | file, principial     |          |               |  uid, gid
-chmod      |  MODIFY_FILE_ATTRIBUTES   | file                 |          |               |  mode
-fchmod     |  MODIFY_FILE_ATTRIBUTES   | file                 |          |               |  mode
-fchmodat   |  MODIFY_FILE_ATTRIBUTES   | file                 |          |               |  mode
+syscall    | Event type                 | Predicate Objs        | Predicate Obj2     | size          | Properties                         
+-----------|----------------------------|-----------------------|--------------------|---------------|------------------------------------                            
+clone      | CLONE                      | child process         |                    |               | 
+execve     | EXECUTE                    | file                  |                    |               | cmdLine
+exit       | EXIT                       | X                     |                    |               |
+setuid     | CHANGE\_PRINCIPAL          | principal             |                    |               | newuid, rc                         
+mmap       | MMAP                       | memory, file          | file               | length        | flags, prot
+munmap     | OTHER                      | memory                |                    | length        |                                    
+mremap     | CORRELATE                  | new memory object     | old memory object  |               | 
+mprotect   | MPROTECT                   | memory                |                    |               | address, length, prot
+open       | OPEN                       | file                  |                    |               | flags
+read       | READ                       | file or netflow, ipc  |                    | bytesRead     |                                    
+write      | WRITE                      | file or netflow, ipc  |                    | bytesWritten  |                                    
+pipe       | CREATE\_OBJECT             | pipe object           |                    |               |                                    
+accept     | ACCEPT                     | netflow, ipc          |                    |               | rc
+connect    | CONNECT                    | netflow, ipc          |                    |               | rc
+send       | SENDTO                     | netflow, ipc          |                    |               |                                    
+sendto     | SENDTO                     | netflow, ipc          |                    |               |                                    
+sendmsg    | SENDMSG                    | netflow, ipc          |                    |               |                                    
+recv       | RECVFROM                   | netflow, ipc          |                    |               |                                    
+recvfrom   | RECVFROM                   | netflow, ipc          |                    |               |                                    
+recvmsg    | RECVMSG                    | netflow, ipc          |                    |               |                                    
+ioctl      | FCNTL                      | file                  | command            |               |                                    
+mount      | MOUNT                      |                       |                    |               |  devname, dirname, type, flags, rc  
+shmat      | SHM                        | file,memory           |                    |               |  shmid, shmaddr, shmflg, rc, raddr  
+chown      | MODIFY\_FILE\_ATTRIBUTES   | file, principial      |                    |               |  uid, gid
+fchown     | MODIFY\_FILE\_ATTRIBUTES   | file, principial      |                    |               |  uid, gid
+fchownat   | MODIFY\_FILE\_ATTRIBUTES   | file, principial      |                    |               |  uid, gid
+lchown     | MODIFY\_FILE\_ATTRIBUTES   | file, principial      |                    |               |  uid, gid
+chmod      | MODIFY\_FILE\_ATTRIBUTES   | file                  |                    |               |  mode
+fchmod     | MODIFY\_FILE\_ATTRIBUTES   | file                  |                    |               |  mode
+fchmodat   | MODIFY\_FILE\_ATTRIBUTES   | file                  |                    |               |  mode
 
 Note
 --------
