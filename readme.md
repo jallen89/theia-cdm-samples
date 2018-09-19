@@ -84,7 +84,7 @@ CDMv19 Updates
       `EVENT_WRITE_SOCKET_PARAMS` were used to model read and writes from
       sockets respectively. For engagement 4, we will model read and writes from 
       sockets using  `EVENT_READ` and `EVENT_WRITE` instead. When a read or
-      write event for a socket is reported, the event's `predicateObject1` field 
+      write event from a socket is reported, the event's `predicateObject1` field 
       will be set to the netflow object or IPC object's  UUID.
     * `EVENT_OPEN` will now provide the flags arguments in human-readable form
       in the property map `flags ":"O_WRONLY|O_CREAT|O_TRUNC"`.
@@ -121,7 +121,7 @@ parentSubject  | V
 localPrincipal | V
 startTimeStamp | V
 cmdLine        | V
-properties     | path, uid, euid, suid, fsuid, gid, egid, sgid, fsgid, ppid
+properties     | path, uid, euid, suid, fsuid, gid, egid, sgid, fsgid
 
 * Note that Linux kernel does not clearly distinguish threads from processes.
 * THEIA reports the *pid* of a *task_struct* as cid, not tgid.
@@ -285,7 +285,8 @@ TimeMarker
 Events
 ------
 
-* THEIA is an event (syscall)-based system such that it may not be able to provide detailed information of certain subjects and objects when they were created before THEIA starts to monitor the system execution.
+* THEIA is an event (syscall)-based system such that it may not be able to provide detailed information of certain subjects and objects 
+when they were created before THEIA starts to monitor the system execution.
 
 syscall    | Event type                 | Predicate Objs        | Predicate Obj2     | size          | Properties                         
 -----------|----------------------------|-----------------------|--------------------|---------------|------------------------------------                            
