@@ -158,23 +158,11 @@ localPort      | V
 remoteAddress  | V
 remotePort     | V
 
-* Basically, THEIA's NetFlowObject is created by partially extracting (important) information from struct sockaddr (http://www.retran.com/beej/sockaddr_inman.html).
-* Every information was collected as a best-effort manner. Sometimes kernel does not return complete information because of its lazy data allocation.
 * Remote connection (Internet connection)
   * Established connection: All localAddress, localPort, remoteAddress, remotePort are filled with values.
-  * Non-established connection (a socket has been created and bound to a pair of IP and port, but not yet connected to a remote client or server): localAddress and localPort have values, but remoteAddress and remotePort do not.
-    * localAddress == 0.0.0.0 would mean no address has been assigned to this socket yet (https://tools.ietf.org/html/rfc1700)
-* Local connection (UNIX domain socket or local Internet connection)
-  * UNIX domain socket: localAddress is filled with either LOCAL or a file path (e.g., /tmp/.X11-unix/X0).
-    * LOCAL would mean no file path has been assigned to the domain socket yet.
-  * Local Internet connection: Both localAddress and remoteAddress are 127.0.0.1. This means that two processes use Internet connection for inter-process communication.
-* Netlink connection (a communication mechanism between a user process and kernel)
-  * localAddress is filled with NETLINK and localPort is filled with the process ID of a user process (if it is not 0).
-* Errors (Default Values) mean that THEIA has failed to retrieve information. Possible reasons include
-  * Not-yet supported socket type: raw socket, IPv6 socket, ...
-  * No corresponding information (e.g., domain sockets do not need to have remote info).
-  * A newly created socket without any address assignment.
-
+  * Non-established connection (a socket has been created and bound to a pair of IP and port, but not yet connected to a remote client or server): 
+        localAddress and localPort have values, but remoteAddress and remotePort do not.
+ * localAddress == 0.0.0.0 would mean no address has been assigned to this socket yet (https://tools.ietf.org/html/rfc1700)
 
 IPCObject
 ----------
