@@ -134,7 +134,7 @@ The command below would send a backward query with the following arguments:
 * start timestamp: `1537403124236956107`
 * end timestamp: `1537403125239814679`
 * hops: `4` 
-```python
+```
 $ theia-client backward-query 440c00a0-22c6-b07f-0000-000000000050 1537403124236956107 1537403125239814679 4 
 ```
 
@@ -162,7 +162,7 @@ The status of a query can have the following states:
 #### List all queries made
 You can locate the query ID for all queries using the `list` command:
 
-```shell
+```
 $ theia-client list
 {'_id': 'Theia1', 'status': 'Finished.', 'uuid': '440c00a0-22c6-b07f-0000-000000000050', 'hops': u'4', 'query_type': 'backward', 'start': '1537403124236956107', 'end': '1537403125239814679',}
 {'_id': 'Theia2', 'status': 'Finished.', 'uuid': '850b6f01-0000-0000-0000-000000000021', 'hops': u'3', 'query_type': 'forward', 'start': '1537403124236034502', 'end': '1537403124236069253'}
@@ -209,7 +209,7 @@ Include the following parameters in the body:
 * `timeout ` (optional) The timeout for a query to finish. The default value is 30
 * `uuid_end` (optional) This is an optional parameter, that is only meaningful for point-to-point queries.  
 
-```json 
+``` 
 { 
     '_id': 'theiaT209',
     'query_type': 'backward', 
