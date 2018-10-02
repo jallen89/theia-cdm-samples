@@ -90,7 +90,17 @@ CDMv19 Updates
       in the property map `flags ":"O_WRONLY|O_CREAT|O_TRUNC"`.
     * New Events Supported: `EVENT_CORRELATE`, `EVENT_EXIT`
 
-
+* __UI Events__:
+    * Current support for providing UI information in CDM data is best effort, and focus soley on mouse click (no keyboard support). It has been tested on both Firefox and Nautilus (Linux's file manager).
+    * UI information will be provide in properties map of the receive event record which corresponds to the receiving of the X11 button release event.
+    * Currently we provide the following information of the UI element that is clicked (using the corresponding keys in the properties map):
+      * app.name: name of the application which contains the UI clicked
+      * name: descriptive name of the clicked UI, for links in browser, that's the anchor text, for buttons on web form, that's usually the words on the button. Other example include the name of the file/folder icon clicked in Nautilus
+      * role: the role of the clicked UI (according to Linux accessibility standards). Examples include links, push buttons, icons
+      * url: this applies to links in a browser only, and it's the target URL of the clicked link
+      * window: this is the name of the window that contains the clicked UI, hopefully can provide some more context for the click
+      * src_url: this also applies a browser only, and it's the URL displayed in the address bar when a link is clicked (i.e. the URL of the page in which the click happens)
+      * time: this is for internal use, signifies the time (in ms) when the UI event is RECEIVED (but not processed), which helps us sync up events
 
  * __Misc__: 
     * `TCCDM_DATUM` records will now explicitly state the record's type.
