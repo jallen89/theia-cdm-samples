@@ -297,6 +297,7 @@ munmap     | OTHER                      | memory                |               
 mremap     | CORRELATE                  | new memory object     | old memory object  |               | 
 mprotect   | MPROTECT                   | memory                |                    |               | address, length, prot
 open       | OPEN                       | file                  |                    |               | flags
+unlink     | UNLINK                     | file                  |                    |               | 
 read       | READ                       | file or netflow, ipc  |                    | bytesRead     |                                    
 write      | WRITE                      | file or netflow, ipc  |                    | bytesWritten  |                                    
 pipe       | CREATE\_OBJECT             | pipe object           |                    |               |                                    
