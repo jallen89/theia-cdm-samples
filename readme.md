@@ -291,7 +291,7 @@ syscall    | Event type                 | Predicate Objs        | Predicate Obj2
 clone      | CLONE                      | child process         |                    |               | 
 execve     | EXECUTE                    | file                  |                    |               | cmdLine
 exit       | EXIT                       | X                     |                    |               |
-setuid     | CHANGE\_PRINCIPAL          | principal             |                    |               | newuid, rc                         
+setuid     | CHANGE\_PRINCIPAL          |                       |                    |               | newuid, rc                         
 mmap       | MMAP                       | memory, file          | file               | length        | flags, prot
 munmap     | OTHER                      | memory                |                    | length        |                                    
 mremap     | CORRELATE                  | new memory object     | old memory object  |               | 
@@ -312,10 +312,10 @@ recvmsg    | RECVMSG                    | netflow, ipc          |               
 ioctl      | FCNTL                      | file                  | command            |               |                                    
 mount      | MOUNT                      |                       |                    |               |  devname, dirname, type, flags, rc  
 shmat      | SHM                        | file,memory           |                    |               |  shmid, shmaddr, shmflg, rc, raddr  
-chown      | MODIFY\_FILE\_ATTRIBUTES   | file, principial      |                    |               |  uid, gid
-fchown     | MODIFY\_FILE\_ATTRIBUTES   | file, principial      |                    |               |  uid, gid
-fchownat   | MODIFY\_FILE\_ATTRIBUTES   | file, principial      |                    |               |  uid, gid
-lchown     | MODIFY\_FILE\_ATTRIBUTES   | file, principial      |                    |               |  uid, gid
+chown      | MODIFY\_FILE\_ATTRIBUTES   | file                  |                    |               |  uid, gid
+fchown     | MODIFY\_FILE\_ATTRIBUTES   | file                  |                    |               |  uid, gid
+fchownat   | MODIFY\_FILE\_ATTRIBUTES   | file                  |                    |               |  uid, gid
+lchown     | MODIFY\_FILE\_ATTRIBUTES   | file                  |                    |               |  uid, gid
 chmod      | MODIFY\_FILE\_ATTRIBUTES   | file                  |                    |               |  mode
 fchmod     | MODIFY\_FILE\_ATTRIBUTES   | file                  |                    |               |  mode
 fchmodat   | MODIFY\_FILE\_ATTRIBUTES   | file                  |                    |               |  mode
