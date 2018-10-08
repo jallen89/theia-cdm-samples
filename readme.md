@@ -91,6 +91,7 @@ CDMv19 Updates
     * New Events Supported: `EVENT_CORRELATE`, `EVENT_EXIT`
 
 * __UI Events__:
+    * We provide sample CDM data that include UI events in `cdm-19/theia-ui.bin.gz`.
     * Current support for providing UI information in CDM data is best effort, and focus soley on mouse click (no keyboard support). It has been tested on both Firefox and Nautilus (Linux's file manager).
     * UI information will be provide in properties map of the receive event record which corresponds to the receiving of the X11 button release event.
     * Currently we provide the following information of the UI element that is clicked (using the corresponding keys in the properties map):
