@@ -231,3 +231,9 @@ Cancel a query in process.
 
 
 [ci-docs]: https://git.tc.bbn.com/carter/theia-ci-docs/blob/master/README.md
+
+
+Limitation
+==========
+
+Currently the replay of multi-threaded program enforces thread scheduling by hooking user-space synchronizations (i.e., `pthread` interface). With that being said, the replay cannot handle programs using non-pthread synchronizations or racy programs, which will cause a divergence in replay. Known programs include the original Firefox browser, gcc/g++.
