@@ -184,6 +184,7 @@ uuid           | V
 type           | V
 properties     | type, path
 
+* The __path__ property will always be __base64 encoded__.
 * __Unix Domain Sockets__: Theia uses the new IPC Record to model Unix domain sockets,
 which are used for communication between two processes on the same host, and they do not cross 
 the host boundary. Additionally, there are three flavors of domain sockets: _pathname_, _abstract_, 
